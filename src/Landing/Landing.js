@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import ScrollReveal from "scrollreveal";
-
 import "./landing.scss";
 
 export default function Landing() {
@@ -21,7 +20,7 @@ export default function Landing() {
   const fadeContent = {
     duration: 1250,
     interval: 150,
-    delay: 200,
+    delay: 100,
     reset: false
   };
 
@@ -38,4 +37,4 @@ export default function Landing() {
       </div>
     </div>
   )
-}
+};

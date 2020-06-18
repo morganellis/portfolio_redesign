@@ -7,14 +7,13 @@ import Projects from "./Projects/Projects";
 import Resume from "./Resume/Resume";
 import Contact from "./Contact/Contact";
 
-
 function App() {
 
   function initFullpage() {
     fullpage("#fullpage", {
       navigationPosition: "right",
       normalScrollElements: "#normal-scroll",
-      sectionsColor: ['#FFFFF', '#FA4D85', '#49CFDA', '#F8D241', '#CBCCCE'],
+      sectionsColor: ["#FFFFF", "#FA4D85", "#49CFDA", "#F8D241", "#CBCCCE"],
       navigation: true,
       licenseKey: "OPEN-SOURCE-GPLV3-LICENSE"
     });
