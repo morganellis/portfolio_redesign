@@ -1,0 +1,141 @@
+.landing-wrap2 {
+  // background: url("../assets/img/main/landing-bkg.jpg") no-repeat top center / cover;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  .main {
+    height: 100vh;
+    margin-left: 11px;
+  }
+
+  .bkg-graphic {
+    position: absolute;
+  }
+
+  .corner-left {
+    z-index: 9;
+    top: 0;
+    left: 0;
+    max-height: 62.5vh;
+  }
+
+  .corner-right {
+    z-index: 9;
+    bottom: 4px;
+    right: 0;
+    max-height: 54vh;
+  }
+
+  .yellow-circle-striped {
+    z-index: 8;
+    top: 53vh;
+    left: 5px;
+    max-height: 12vh;
+  }
+
+  .gray-triangle-large {
+    z-index: 8;
+    top: 0;
+    left: 585px;
+    max-height: 19vh;
+  }
+
+  .yellow-circle-small {
+    z-index: 8;
+    top: 2vh;
+    left: 555px;
+    max-height: 2vh;
+  }
+
+  .gray-dots-large {
+    z-index: 8;
+    top: 0;
+    right: 7px;
+    max-height: 19vh;
+  }
+
+  .pink-squares {
+    z-index: 8;
+    top: 17.5vh;
+    left: 924px;
+    max-height: 9.5vh;
+  }
+
+  .yellow-circle-small {
+    z-index: 8;
+    top: 2vh;
+    left: 555px;
+    max-height: 2vh;
+  }
+
+  .blue-circle {
+    z-index: 8;
+    top: 14.75vh;
+    left: 380px;
+    max-height: 5vh;
+  }
+
+  .pink-circle {
+    z-index: 8;
+    top: 44.5vh;
+    left: 200px;
+    max-height: 5vh;
+  }
+
+  .gray-square-outlined {
+    z-index: 8;
+    bottom: 18vh;
+    left: 150px;
+    max-height: 29vh;
+  }
+
+  .gray-dots-medium {
+    z-index: 8;
+    bottom: 5.5vh;
+    left: -10px;
+    max-height: 24vh;
+  }
+
+  .blue-circle-with-ring {
+    z-index: 8;
+    bottom: 5vh;
+    left: 60px;
+    max-height: 18.5vh;
+  }
+
+  .yellow-circle {
+    z-index: 8;
+    bottom: 6vh;
+    left: 230px;
+    max-height: 5vh;
+  }
+
+  .blue-circle-striped {
+    z-index: 8;
+    top: 24vh;
+    right: 50px;
+    max-height: 17vh;
+  }
+
+  .gray-square-outlined-xl {
+    z-index: 8;
+    bottom: 27vh;
+    right: 70px;
+    max-height: 35vh;
+  }
+
+  .pink-circle-2 {
+    z-index: 8;
+    bottom: 42vh;
+    right: 214px;
+    max-height: 5vh;
+  }
+
+  .pink-circle-striped {
+    z-index: 8;
+    bottom: 28vh;
+    right: 322px;
+    max-height: 14vh;
+  }
+}
