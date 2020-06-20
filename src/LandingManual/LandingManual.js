@@ -29,7 +29,7 @@ export default function LandingManual() {
         <Fade duration={600} left delay={150}> <img className="pink-circle bkg-graphic fade-left" src={require("../assets/img/graphics/pink-circle.png")} alt="" /></Fade>
         <Fade duration={600} top delay={150}><img className="yellow-circle-small bkg-graphic fade-top" src={require("../assets/img/graphics/yellow-circle.png")} alt="" /></Fade>
 
-        <Fade duration={800} delay={200}>
+        <Fade duration={900} delay={200}>
           <div className="landing-container content">
             <p className="title">MORGAN</p>
             <p className="title">ELLIS</p>
