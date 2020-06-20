@@ -1,141 +1,405 @@
-.landing-wrap2 {
-  // background: url("../assets/img/main/landing-bkg.jpg") no-repeat top center / cover;
+.landing-wrap {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  width: 100vw;
 
-  .main {
-    height: 100vh;
-    margin-left: 11px;
+  .title {
+    font-family: "Gotham-Bold";
+    font-size: 50px;
+
+    @media only screen and (min-width: 350px) {
+      font-size: 68px;
+    }
+
+    @media only screen and (min-width: 550px) {
+      font-size: 72px;
+    }
+
+    @media only screen and (min-width: 700px) {
+      font-size: 80px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      font-size: 90px;
+    }
+
+    @media only screen and (min-width: 1400px) {
+      font-size: 115px;
+    }
+  }
+
+  .divider {
+    background: black;
+    margin: 10px 0 20px 0;
+    height: 2.5px;
+    width: 50px;
+
+    @media only screen and (min-width: 1200px) {
+      margin: 20px 0 30px 0;
+    }
+
+    @media only screen and (min-width: 1400px) {
+      margin: 25px 0 40px 0;
+      height: 3px;
+    }
+  }
+
+  .subtitle {
+    font-family: "Gotham-Book";
+    font-size: 22px;
+
+    @media only screen and (min-width: 700px) {
+      font-size: 26px;
+    }
+
+    @media only screen and (min-width: 900px) {
+      font-size: 30px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      font-size: 32px;
+    }
+
+    @media only screen and (min-width: 1400px) {
+      font-size: 34px;
+    }
   }
 
   .bkg-graphic {
     position: absolute;
   }
 
+  .landing-container,
+  .subtitle-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
   .corner-left {
     z-index: 9;
     top: 0;
     left: 0;
-    max-height: 62.5vh;
+    max-width: 80vw;
+
+    @media only screen and (min-width: 700px) {
+      max-height: 62.5vh;
+      max-width: 50vw;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      max-height: 62.5vh;
+      max-width: 50vw;
+    }
   }
 
   .corner-right {
     z-index: 9;
-    bottom: 4px;
-    right: 0;
-    max-height: 54vh;
+    bottom: 0;
+    right: -20px;
+    max-width: 90vw;
+
+    @media only screen and (min-width: 700px) {
+      right: 0;
+      max-height: 54vh;
+      max-width: 50vw;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      max-height: 54vh;
+      max-width: 50vw;
+    }
   }
 
   .yellow-circle-striped {
     z-index: 8;
-    top: 53vh;
-    left: 5px;
-    max-height: 12vh;
+    top: 48vh;
+    left: -8vw;
+    max-height: 14vh;
+
+    @media only screen and (min-width: 700px) {
+      top: 53vh;
+      left: 2vw;
+      max-height: 12vh;
+    }
+
+    @media only screen and (min-width: 1200px) {}
+  }
+
+  .gray-triangle-right {
+    z-index: 8;
+    transform: rotate(90deg);
+    top: 12vh;
+    right: -14vw;
+    max-width: 50vw;
+
+    @media only screen and (min-width: 700px) {
+      display: none;
+      opacity: 0;
+      top: 0;
+      right: 23vw;
+      max-height: 19vh;
+    }
   }
 
   .gray-triangle-large {
     z-index: 8;
-    top: 0;
-    left: 585px;
-    max-height: 19vh;
-  }
+    display: none;
 
-  .yellow-circle-small {
-    z-index: 8;
-    top: 2vh;
-    left: 555px;
-    max-height: 2vh;
+    @media only screen and (max-width: 699px) {
+      display: none;
+    }
+
+    @media only screen and (min-width: 700px) {
+      display: unset;
+      top: 0;
+      right: 23vw;
+      max-height: 19vh;
+    }
   }
 
   .gray-dots-large {
+    display: none;
     z-index: 8;
-    top: 0;
-    right: 7px;
-    max-height: 19vh;
+
+    @media only screen and (min-width: 700px) {
+      display: unset;
+      top: 7px;
+      right: 7px;
+      max-height: 19vh;
+    }
+
+    @media only screen and (min-width: 1200px) {}
   }
 
   .pink-squares {
+    display: none;
     z-index: 8;
-    top: 17.5vh;
-    left: 924px;
-    max-height: 9.5vh;
+
+    @media only screen and (min-width: 700px) {
+      display: unset;
+      top: 10vh;
+      right: 18vw;
+      max-height: 9.5vh;
+    }
+
+    @media only screen and (min-width: 1200px) {}
   }
 
   .yellow-circle-small {
     z-index: 8;
-    top: 2vh;
-    left: 555px;
-    max-height: 2vh;
+    top: 10px;
+    right: 3.5vw;
+    max-height: 2.5vh;
+
+    @media only screen and (min-width: 700px) {
+      top: 2vh;
+      left: 45vw;
+      max-height: 2vh;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      top: 2vh;
+      left: 45vw;
+      max-height: 2vh;
+    }
   }
 
   .blue-circle {
     z-index: 8;
-    top: 14.75vh;
-    left: 380px;
+    top: 22vh;
+    right: 35vw;
     max-height: 5vh;
+
+    @media only screen and (min-width: 1200px) {
+      top: 14.75vh;
+      left: 380px;
+      max-height: 5vh;
+    }
+
+    @media only screen and (min-width: 700px) {
+      top: 14.75vh;
+      left: 380px;
+      max-height: 5vh;
+    }
   }
 
   .pink-circle {
+    display: none;
     z-index: 8;
-    top: 44.5vh;
+    top: 40vh;
     left: 200px;
+    left: 18vw;
     max-height: 5vh;
+
+    @media only screen and (min-width: 1200px) {
+      display: unset;
+    }
+
+    @media only screen and (min-width: 700px) {
+      display: unset;
+    }
   }
 
   .gray-square-outlined {
+    display: none;
     z-index: 8;
-    bottom: 18vh;
-    left: 150px;
-    max-height: 29vh;
+
+    @media only screen and (min-width: 1200px) {
+      display: unset;
+      bottom: 20vh;
+      left: 16vw;
+      max-height: 29vh;
+    }
+
+    @media only screen and (min-width: 1200px) {}
   }
 
   .gray-dots-medium {
     z-index: 8;
-    bottom: 5.5vh;
-    left: -10px;
+    bottom: 8vh;
+    left: -22px;
     max-height: 24vh;
+
+    @media only screen and (min-width: 700px) {
+      bottom: 4vh;
+      left: 1vw;
+      max-height: 24vh;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      bottom: 4vh;
+      left: 1vw;
+      max-height: 24vh;
+    }
+
+    @media (max-width: 780px) and (max-height: 780px) {
+      bottom: 10px;
+      left: 10px;
+    }
   }
 
   .blue-circle-with-ring {
     z-index: 8;
-    bottom: 5vh;
-    left: 60px;
-    max-height: 18.5vh;
+    bottom: 14vh;
+    left: 16vw;
+    max-height: 16vh;
+
+    @media only screen and (min-width: 700px) {
+      bottom: 25px;
+      left: 10vw;
+      max-height: 18.5vh;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      bottom: 25px;
+      left: 10vw;
+      max-height: 18.5vh;
+    }
+
+    @media (max-width: 780px) and (max-height: 780px) {
+      display: none;
+    }
   }
 
   .yellow-circle {
+    display: none;
     z-index: 8;
-    bottom: 6vh;
-    left: 230px;
-    max-height: 5vh;
+
+    @media only screen and (min-width: 700px) {
+      display: unset;
+      bottom: 30px;
+      left: 32vw;
+      max-height: 5vh;
+    }
+
+    @media only screen and (min-width: 1200px) {}
   }
 
   .blue-circle-striped {
+    display: none;
     z-index: 8;
-    top: 24vh;
-    right: 50px;
-    max-height: 17vh;
+
+    @media only screen and (min-width: 700px) {
+      display: unset;
+      top: 24vh;
+      right: 4vw;
+      max-height: 17vh;
+    }
+
+    @media only screen and (min-width: 1200px) {}
   }
 
   .gray-square-outlined-xl {
+    display: none;
     z-index: 8;
-    bottom: 27vh;
+    bottom: 25vh;
     right: 70px;
     max-height: 35vh;
+
+    @media only screen and (min-width: 700px) {
+      display: unset;
+      bottom: 25vh;
+      right: 70px;
+      max-height: 35vh;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      display: unset;
+      bottom: 25vh;
+      right: 70px;
+      max-height: 35vh;
+    }
   }
 
   .pink-circle-2 {
+    display: none;
     z-index: 8;
-    bottom: 42vh;
-    right: 214px;
-    max-height: 5vh;
+
+    @media only screen and (min-width: 700px) {
+      display: unset;
+      bottom: 40vh;
+      right: 18vw;
+      max-height: 5vh;
+    }
+
+    @media only screen and (min-width: 1400px) {
+      right: 14vw;
+      max-height: 5vh;
+    }
   }
 
   .pink-circle-striped {
+    display: none;
     z-index: 8;
-    bottom: 28vh;
-    right: 322px;
-    max-height: 14vh;
+    right: -20vw;
+    max-height: 25vh;
+
+    @media only screen and (max-width: 699px) {
+      top: 42vh;
+    }
+
+    @media only screen and (min-width: 700px) {
+      display: unset;
+      bottom: 16vh;
+      right: 38vw;
+      max-height: 13vh;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: unset;
+      bottom: 10vh;
+      right: 42vw;
+      max-height: 13vh;
+    }
+
+    // @media (min-height: 900px) and (min-width: 1000px) {
+    //   display: unset;
+    // }
   }
 }

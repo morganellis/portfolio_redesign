@@ -7,7 +7,7 @@
   height: 100vh;
 
   .landing-bkg {
-    position: absolute;
+    position: fixed;
     background: url("../assets/img/main/landing-bkg-xsmall-mobile.png") no-repeat top center / cover;
     display: flex;
     flex-direction: column;

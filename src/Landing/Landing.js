@@ -16,9 +16,9 @@ export default function Landing() {
     ScrollReveal().reveal(".content", fadeContent);
     setState(prevState => { return { ...prevState, initialized: true } });
   };
-  
+
   const fadeContent = {
-    duration: 1250,
+    duration: 1200,
     interval: 150,
     delay: 100,
     reset: false

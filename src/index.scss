@@ -51,3 +51,8 @@ body {
   font-family: "Gibson-Light";
   src: url("./assets/fonts/Gibson-Light.ttf");
 }
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
