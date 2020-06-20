@@ -5,9 +5,9 @@
   align-items: center;
   flex-wrap: wrap;
   height: 100vh;
-  
 
   .profile-img {
-    width: 350px;
+    width: 80vw;
+    max-width: 300px;
   }
 }

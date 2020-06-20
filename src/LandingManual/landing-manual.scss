@@ -1,3 +1,7 @@
+.landing-main {
+  height: 100vh;
+}
+
 .landing-wrap {
   position: relative;
   display: flex;
@@ -5,21 +9,22 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
 
   .title {
     font-family: "Gotham-Bold";
-    font-size: 50px;
+    font-size: 52px;
 
     @media only screen and (min-width: 350px) {
       font-size: 68px;
     }
 
-    @media only screen and (min-width: 550px) {
-      font-size: 72px;
+    @media only screen and (min-width: 500px) {
+      font-size: 80px;
     }
 
     @media only screen and (min-width: 700px) {
-      font-size: 80px;
+      font-size: 85px;
     }
 
     @media only screen and (min-width: 1200px) {
@@ -49,7 +54,11 @@
 
   .subtitle {
     font-family: "Gotham-Book";
-    font-size: 22px;
+    font-size: 21px;
+
+    @media only screen and (min-width: 400px) {
+      font-size: 24px;
+    }
 
     @media only screen and (min-width: 700px) {
       font-size: 26px;
@@ -101,7 +110,7 @@
   .corner-right {
     z-index: 9;
     bottom: 0;
-    right: -20px;
+    right: 0;
     max-width: 90vw;
 
     @media only screen and (min-width: 700px) {
@@ -119,7 +128,7 @@
   .yellow-circle-striped {
     z-index: 8;
     top: 48vh;
-    left: -8vw;
+    left: 4vw;
     max-height: 14vh;
 
     @media only screen and (min-width: 700px) {
@@ -133,10 +142,9 @@
 
   .gray-triangle-right {
     z-index: 8;
-    transform: rotate(90deg);
-    top: 12vh;
-    right: -14vw;
-    max-width: 50vw;
+    top: 10vh;
+    right: 0;
+    max-width: 32vw;
 
     @media only screen and (min-width: 700px) {
       display: none;
@@ -216,15 +224,9 @@
     right: 35vw;
     max-height: 5vh;
 
-    @media only screen and (min-width: 1200px) {
-      top: 14.75vh;
-      left: 380px;
-      max-height: 5vh;
-    }
-
     @media only screen and (min-width: 700px) {
       top: 14.75vh;
-      left: 380px;
+      right: 65vw;
       max-height: 5vh;
     }
   }
@@ -263,18 +265,11 @@
   .gray-dots-medium {
     z-index: 8;
     bottom: 8vh;
-    left: -22px;
+    left: 1vw;
     max-height: 24vh;
 
     @media only screen and (min-width: 700px) {
       bottom: 4vh;
-      left: 1vw;
-      max-height: 24vh;
-    }
-
-    @media only screen and (min-width: 1200px) {
-      bottom: 4vh;
-      left: 1vw;
       max-height: 24vh;
     }
 
@@ -364,13 +359,20 @@
     @media only screen and (min-width: 700px) {
       display: unset;
       bottom: 40vh;
-      right: 18vw;
+      right: 24vw;
       max-height: 5vh;
     }
 
-    @media only screen and (min-width: 1400px) {
+    @media only screen and (min-width: 1000px) {
+      right: 16vw;
+    }
+
+    @media only screen and (min-width: 1600px) {
       right: 14vw;
-      max-height: 5vh;
+    }
+
+    @media only screen and (min-width: 1800px) {
+      right: 12vw;
     }
   }
 
