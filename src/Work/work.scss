@@ -1,0 +1,91 @@
+.work-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  min-height: 100vh;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    height: 700px;
+    width: 100%;
+  }
+
+  .col {
+    position: relative;
+  }
+
+  .txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 50%;
+  }
+
+  .left {
+    .graphic-bkg {
+      position: absolute;
+      height: 400px;
+      top: 0;
+      left: 0;
+    }
+
+    .project-img {
+      position: absolute;
+      max-width: 600px;
+      top: 50px;
+      left: 50px;
+    }
+  }
+
+  .right {
+    .graphic-bkg {
+      position: absolute;
+      height: 400px;
+      top: 0;
+      right: 0;
+    }
+
+    .project-img {
+      position: absolute;
+      max-width: 600px;
+      top: 50px;
+      right: 50px;
+    }
+  }
+
+  .slenderiiz {
+    .graphic-bkg {
+      height: 475px;
+    }
+
+    .project-img {
+      right: 75px;
+    }
+  }
+
+  .enrollment {
+    padding-top: 50px;
+
+    .project-img {
+      top: 30px;
+      right: 30px;
+    }
+  }
+
+  .transformations {
+    .graphic-bkg {
+      height: 400px;
+    }
+
+    .project-img {
+      top: 10px;
+      left: 10px;
+    }
+  }
+}

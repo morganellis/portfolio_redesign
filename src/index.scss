@@ -46,14 +46,15 @@ body {
   font-family: "Gibson";
   src: url("./assets/fonts/Gibson.ttf");
 }
+
 @font-face {
   font-family: "Gibson-Light";
   src: url("./assets/fonts/Gibson-Light.ttf");
 }
 
 body {
-   width: 100vw;
-   overflow-x: hidden;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .hide {
@@ -113,4 +114,12 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.hdr {
+  font-family: "Gotham-Bold";
+}
+
+.para {
+  font-family: "Gotham-Book";
 }
