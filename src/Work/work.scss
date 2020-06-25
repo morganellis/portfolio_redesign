@@ -4,88 +4,216 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px;
-  min-height: 100vh;
+  margin: 50px 20px;
 
   .row {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    height: 650px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
     width: 100%;
+    max-width: 460px;
+
+    @media only screen and (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 650px;
+      // width: 95%;
+      max-width: 1200px;
+    }
   }
 
   .col {
     position: relative;
+    height: 450px;
+    width: 100%;
+    max-width: 460px;
+
+    @media only screen and (min-width: 1200px) {
+      max-width: 1200px;
+    }
+  }
+
+  .hdr {
+    font-size: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .slenderiiz {
+    .hdr {
+      border-bottom: 1px solid #F8D241;
+    }
+  }
+
+  .diamonds {
+    .hdr {
+      border-bottom: 1px solid #49CFDA;
+    }
+  }
+
+  .enrollment {
+    .hdr {
+      border-bottom: 1px solid #CBCCCE;
+    }
+  }
+
+  .jouve {
+    .hdr {
+      border-bottom: 1px solid #FA4D85;
+    }
   }
 
   .txt {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 500px;
-    width: 50%;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+
+    @media only screen and (min-width: 1200px) {
+      display: flex;
+      height: 500px;
+      width: 80%;
+    }
+  }
+
+  .img {
+    position: relative;
+  }
+
+  .project-img {
+    cursor: pointer;
+    transition: .25s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .para {
+    font-size: 16px;
+    letter-spacing: 0.75px;
+    line-height: 1.5;
+  }
+
+  .tech {
+    padding-top: 20px;
   }
 
   .left {
     .graphic-bkg {
       position: absolute;
-      height: 400px;
+      height: 300px;
       top: 0;
-      left: 0;
+      left: 20px;
+
+      @media only screen and (min-width: 1200px) {
+        top: 0;
+        left: 0;
+        height: 400px;
+      }
     }
 
     .project-img {
       position: absolute;
-      max-width: 600px;
-      top: 50px;
-      left: 50px;
+      max-height: 350px;
+      top: 25px;
+      right: 20px;
+
+      @media only screen and (min-width: 1200px) {
+        max-height: 550px;
+        top: 50px;
+        left: 50px;
+      }
     }
   }
 
   .right {
     .graphic-bkg {
       position: absolute;
-      height: 400px;
+      height: 200px;
       top: 0;
-      right: 0;
+      right: 25px;
+
+      @media only screen and (min-width: 1200px) {
+        height: 400px;
+      }
     }
 
     .project-img {
       position: absolute;
-      max-width: 600px;
-      top: 50px;
-      right: 50px;
+      max-height: 350px;
+      top: 25px;
+      left: 25px;
+
+      @media only screen and (min-width: 1200px) {
+        top: 50px;
+        right: 50px;
+        max-height: 550px;
+      }
     }
   }
 
   .slenderiiz {
     .graphic-bkg {
-      height: 475px;
+      height: 350px;
+
+      @media only screen and (min-width: 1200px) {
+        height: 475px;
+      }
     }
 
     .project-img {
-      right: 75px;
+      top: 50px;
+    }
+  }
+
+  .slenderiiz {
+    .project-img {
+      right: 100px;
     }
   }
 
   .enrollment {
-    padding-top: 20px;
+
+    .graphic-bkg {
+      right: 55px;
+      height: 280px;
+
+      @media only screen and (min-width: 1200px) {
+        height: inherit;
+      }
+    }
 
     .project-img {
-      top: 30px;
-      right: 30px;
+      @media only screen and (min-width: 1200px) {
+        padding-top: 20px;
+        top: 10px;
+        right: 85px;
+        left: unset;
+      }
     }
   }
 
-  .transformations {
+  .jouve {
     .graphic-bkg {
-      height: 400px;
+      height: 280px;
     }
 
     .project-img {
-      top: 10px;
-      left: 10px;
+      top: 15px;
+      left: 35px;
+
+      @media only screen and (min-width: 1200px) {
+        top: -10px;
+        left: -10px;
+      }
     }
   }
 }
