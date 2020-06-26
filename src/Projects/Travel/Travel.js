@@ -11,9 +11,9 @@ export default function Travel() {
         <div className="section">
           <div className="travel-slider-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
-            {/* <video className="travel-slider" loop autoPlay><source src={require("../../assets/img/work/travel/travel-slider-desktop.mov")} type="video/ogg" />
+            <video className="travel-slider" loop autoPlay><source src="https://i.imgur.com/4pDlnuT.mp4" type="video/ogg" />
             Your browser does not support the video tag.
-            </video> */}
+            </video>
           </div>
         </div>
 
