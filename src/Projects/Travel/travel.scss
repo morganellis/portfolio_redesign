@@ -1,0 +1,62 @@
+.travel-wrap {
+  height: 100%;
+
+  .banner {
+    background: url("../../assets/img/work/travel/travel-binoculars.jpg") no-repeat top center / cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh;
+    width: 100%;
+
+  }
+
+  .title {
+    color: white;
+  }
+
+  .section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .travel-slider-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+    height: 250px;
+    width: 100%;
+
+    .desktop-overlay {
+      position: absolute;
+      top: 3px;
+      top: 0;
+      width: 280px;
+    }
+
+    .travel-slider {
+      margin-top: 12px;
+      width: 270px;
+    }
+  }
+
+  .fullpage {
+    border: 2px solid #CBCCCE;
+    width: 280px;
+  }
+
+  .mobile-section {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  .mobile-framed {
+    width: 200px;
+  }
+}
