@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    // justify-content: space-evenly;
     height: 100vh;
     width: 100%;
 
@@ -25,16 +26,18 @@
   .enrollment,
   .travel {
     flex-direction: column-reverse;
+  }
 
+  .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
   }
 
   .txt {
-    display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    text-align: center;
-    padding-bottom: 30px;
-    width: 100%;
 
     @media only screen and (min-width: 1200px) {
       display: flex;
@@ -44,11 +47,12 @@
   }
 
   .txt-container {
-    margin: 0 15px;
+    width: 80%;
   }
 
   .hdr {
-    font-size: 30px;
+    font-size: 28px;
+    padding-top: 30px;
     padding-bottom: 10px;
 
     @media only screen and (max-width: 1199px) {
@@ -64,8 +68,7 @@
   }
 
   .para {
-    font-size: 16px;
-    padding-bottom: 10px;
+    font-size: 14px;
 
     @media only screen and (min-width: 1200px) {
       font-size: 16px;
@@ -78,6 +81,7 @@
   .tech {
     font-style: italic;
     font-size: 14px;
+      padding-top: 15px;
 
     @media only screen and (min-width: 1200px) {
       padding-top: 20px;
@@ -86,41 +90,25 @@
 
   .project-img {
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: .25s ease-in-out;
-    height: 320px;
-    width: auto;
+    height: auto;
+    width: 80%;
 
     &:hover {
       transform: scale(1.1);
     }
 
     @media only screen and (min-width: 1200px) {
-      height: 550px;
+      height: 100%;
+      width: auto;
     }
   }
 
-}
-
-.right {
-  .project-img {
-
-    @media only screen and (min-width: 1200px) {
-      transform: unset;
-    }
-  }
-}
-
-.left {
-  .project-img {
-
-    @media only screen and (min-width: 1200px) {
-      transform: unset;
-    }
-  }
 }
 
 .slenderiiz {
-  background: url("../assets/img/graphics/yellow-square-outlined.png") no-repeat top right;
   background: url("../assets/img/graphics/yellow-square-outlined.png") no-repeat top right fixed;
   background-size: cover;
 
