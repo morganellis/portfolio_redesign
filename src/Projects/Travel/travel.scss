@@ -3,6 +3,8 @@
 
   .banner {
     background: url("../../assets/img/work/travel/travel-binoculars.jpg") no-repeat top center / cover;
+    background: url("../../assets/img/work/travel/hero_3.jpg") no-repeat top center / cover;
+    background: url("../../assets/img/work/travel/feature.jpg") no-repeat top center / cover;
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
@@ -13,10 +15,6 @@
     width: 100%;
 
   }
-
-  // .project-details {
-  //   padding: 50px 30px;
-  // }
 
   .section {
     display: flex;
@@ -49,14 +47,4 @@
     margin: 15px 0 60px 0;
     width: 100%;
   }
-
-  // .fullpage {
-  //   border: 2px solid #CBCCCE;
-  //   width: 100%;
-  // }
-
-  // .mobile-framed {
-  //   margin: 65px 0 20px 0;
-  //   width: 100%;
-  // }
 }
