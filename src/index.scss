@@ -142,9 +142,103 @@ body {
 }
 
 .project-wrap {
+
+  .project-details {
+    padding: 50px 30px;
+  }
+
+  .section {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh;
+    width: 100%;
+  }
+
   .title {
     font-family: "Gotham-Bold";
     color: white;
     font-size: 60px;
+  }
+
+  .vid-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 15px 0 25px 0;
+    height: 250px;
+    width: 100%;
+
+    .desktop-overlay {
+      position: absolute;
+      top: 3px;
+      top: 0;
+      height: 200px;
+      width: 280px;
+
+      @media only screen and (min-width: 900px) {
+        height: 580px;
+        width: 812px;
+      }
+    }
+
+    .vid {
+      margin-top: 10px;
+      width: 258px;
+
+      @media only screen and (min-width: 900px) {
+        margin-top: 30px;
+        width: 750px;
+      }
+    }
+  }
+
+  .mobile-monitor-view {
+    margin: 15px 0 60px 0;
+    width: 100%;
+  }
+
+  .fullpage {
+    border: 2px solid #CBCCCE;
+    width: 100%;
+  }
+
+  .mobile-slider-wrap {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // text-align: center;
+    width: 100%;
+  }
+
+  .mobile-slider-container {
+    margin-bottom: 65px;
+    max-width: 600px;
+  }
+
+  .mobile-framed {
+    margin: 65px 0 20px 0;
+    width: 75%;
+        max-width: 400px;
+  }
+
+  .chevron {
+    height: 100px;
+  }
+
+  .slick-next,
+  .slick-prev {
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+    opacity: 30%;
   }
 }
