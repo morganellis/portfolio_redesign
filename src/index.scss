@@ -57,6 +57,11 @@ body {
   overflow-x: hidden;
 }
 
+.app-wrap {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 .hide {
   display: none;
 }
@@ -122,4 +127,24 @@ body {
 
 .para {
   font-family: "Gotham-Book";
+}
+
+.mobile {
+  @media only screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.desktop {
+  @media only screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.project-wrap {
+  .title {
+    font-family: "Gotham-Bold";
+    color: white;
+    font-size: 60px;
+  }
 }
