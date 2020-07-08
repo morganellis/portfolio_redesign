@@ -221,18 +221,21 @@ body {
 
   .mobile-monitor-view {
     margin: 15px 0 60px 0;
+    height: auto;
     width: 100%;
   }
 
   .fullpage {
     border: 2px solid #CBCCCE;
+    height: auto;
     width: 100%;
     max-width: 900px;
   }
 
   .mobile-slider-wrap {
-    max-width: 500px;
+    height: auto;
     width: 100%;
+    max-width: 500px;
      @media only screen and (min-width: 900px) {
        margin-top: 40px;
      }
@@ -246,11 +249,13 @@ body {
   }
 
   .slick-slider {
+    height: auto;
     max-width: 500px;
   }
 
   .mobile-framed {
     margin: 65px 0 20px 0;
+    height: auto;
     width: 75%;
     max-width: 400px;
   }
