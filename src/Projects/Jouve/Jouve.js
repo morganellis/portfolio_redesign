@@ -22,22 +22,18 @@ export default function Jouve(props) {
       </div>
       <div className="project-details">
         <div className="vid-sect section">
-          {checkIfMobile() === true ?
-            // <img src={require("../../assets/img/work/jouve/jouve-monitor-view.png")} alt="jouve" />
-            <div className="vid-wrap">
-              <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
-              <iframe title="jouve" src="https://giphy.com/embed/SwHldGqQLQ9RUMhB6d" frameBorder="0" className="gif vid giphy-embed" allowFullScreen></iframe>
-            </div>
-            :
-            <div className="vid-wrap">
-              <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
+          <div className="vid-wrap">
+            <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
+            {checkIfMobile() === true ?
+              <iframe title="jouve" src="https://giphy.com/embed/SwHldGqQLQ9RUMhB6d" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+              :
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/mnj3mg3.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
-            </div>
-          }
+            }
+          </div>
         </div>
 
         <div className="section">
-            <img className="fullpage" src={require("../../assets/img/work/jouve/jouve-fullpage-tight.png")} alt="" />
+          <img className="fullpage" src={require("../../assets/img/work/jouve/jouve-fullpage-tight.png")} alt="" />
         </div>
 
         <div className="mobile-slider-wrap">
@@ -65,17 +61,20 @@ export default function Jouve(props) {
           </div>
         </div>
 
-        {checkIfMobile() === true ?
+        {/* <div className="celeb-sect section">
+          <img className="fullpage" src={require("../../assets/img/work/jouve/jouve-fullpage-celeb.png")} alt="" />
+        </div> */}
+
+        <div className="vid-sect section">
           <div className="vid-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
-            <iframe title="jouve-celeb" src="https://giphy.com/embed/ci0AWSFfmbkgtMFuAv" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+            {checkIfMobile() === true ?
+              <iframe title="jouve-celeb" src="https://giphy.com/embed/ci0AWSFfmbkgtMFuAv" frameBorder="0" class="celeb-gif gif vid giphy-embed" allowFullScreen></iframe>
+              :
+              <video className="celeb-vid vid" loop autoPlay muted><source src="https://i.imgur.com/HomuiX0.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+            }
           </div>
-          :
-          <div className="vid-wrap">
-            <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
-            <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/HomuiX0.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
-          </div>
-        }
+        </div>
 
         <div className="section">
           <img className="fullpage" src={require("../../assets/img/work/jouve/jouve-fullpage-app.png")} alt="" />

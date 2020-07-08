@@ -1,5 +1,5 @@
 import React from "react";
-import { checkIfMobile} from "../../utils/helpers";
+import { checkIfMobile } from "../../utils/helpers";
 import "./travel.scss";
 
 export default function Travel(props) {
@@ -12,13 +12,14 @@ export default function Travel(props) {
       <div className="project-details">
         <div className="section">
 
-          {checkIfMobile() === true ?
-            <img className="travel-desktop-view" src={require("../../assets/img/work/travel/travel-desktop-view.png")} alt="ARIIX Travel" />
-            :
-            <div className="dektop-montior-view travel-slider-wrap">
-              <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
-              <video className="travel-slider" loop autoPlay muted><source src="https://i.imgur.com/4pDlnuT.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
-            </div>
+          <div className="vid-wrap">
+            <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
+            {checkIfMobile() === true ?
+              <iframe title="travel" src="https://giphy.com/embed/kBqnuFehR1LvWb8pqz" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+              :
+              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/4pDlnuT.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+            }
+          </div>
           }
         </div>
 

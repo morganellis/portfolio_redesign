@@ -40,4 +40,26 @@
       width: 840px !important;
     }
   }
+
+  .celeb-sect {
+    margin-bottom: 50px;
+  }
+
+  .celeb-gif {
+width: 270px !important;
+  }
+
+   .celeb-vid {
+     width: 270px !important;
+
+     @media only screen and (min-width: 900px) {
+       margin-top: 30px !important;
+       width: 762px !important;
+     }
+
+     @media only screen and (min-width: 1200px) {
+       margin-top: 34px !important;
+       width: 842px !important;
+     }
+   }
 }
