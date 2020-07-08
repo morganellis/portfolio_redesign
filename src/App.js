@@ -8,6 +8,7 @@ import Jouve from "./Projects/Jouve/Jouve";
 import Travel from "./Projects/Travel/Travel";
 
 function App() {
+
   return (
     <div className="app-wrap">
       <Switch>

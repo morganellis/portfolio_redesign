@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import "./work.scss";
 
 export default function Work() {
+  let iOS = navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+
   return (
     <div className="work-wrap">
 
-      <div className="slenderiiz row">
+      <div className={iOS ? "no-bkg slenderiiz row" : "slenderiiz row"}>
         <div className="txt left col">
           <div className="txt-container">
             <p className="hdr">Slenderiiz™</p>
@@ -23,7 +25,7 @@ export default function Work() {
         </div>
       </div>
 
-      <div className="diamonds row">
+      <div className={iOS ? "no-bkg diamonds row" : "diamonds row"}>
         <div className="img left col">
           {/* <img className="graphic-bkg" src={require("../assets/img/graphics/blue-circle-large.png")} alt="" /> */}
           <Link to="/diamonds"><img className="project-img" src={require("../assets/img/main/diamonds.png")} alt="ARIIX Diamonds" /></Link>
@@ -38,7 +40,7 @@ export default function Work() {
         </div>
       </div>
 
-      <div className="enrollment row">
+      <div className={iOS ? "no-bkg enrollment row" : "enrollment row"}>
         <div className="txt left col">
           <div className="txt-container">
             <p className="hdr">ARIIX Enrollment</p>
@@ -54,7 +56,7 @@ export default function Work() {
         </div>
       </div>
 
-      <div className="jouve row">
+      <div className={iOS ? "no-bkg jouve row" : "jouve row"}>
         <div className="img left col">
           {/* <img className="graphic-bkg" src={require("../assets/img/graphics/pink-square.png")} alt="" /> */}
           <Link to="/jouve"><img className="project-img" src={require("../assets/img/main/jouve.png")} alt="Jouvé" /></Link>
@@ -69,7 +71,7 @@ export default function Work() {
         </div>
       </div>
 
-      <div className="travel row">
+      <div className={iOS ? "no-bkg travel row" : "travel row"}>
         <div className="txt left col">
           <div className="txt-container">
             <p className="hdr">ARIIX Travel</p>
