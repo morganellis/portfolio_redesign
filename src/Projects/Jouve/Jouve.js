@@ -22,11 +22,11 @@ export default function Jouve(props) {
       </div>
       <div className="project-details">
         <div className="vid-sect section">
-          {checkIfMobile() !== true ?
+          {checkIfMobile() === true ?
             // <img src={require("../../assets/img/work/jouve/jouve-monitor-view.png")} alt="jouve" />
             <div className="vid-wrap">
-              <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
-              <video className="vid" autoPlay muted><source src="https://i.imgur.com/5snGQkL.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+              {/* <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" /> */}
+              <iframe title="jouve" src="https://giphy.com/embed/SwHldGqQLQ9RUMhB6d" frameBorder="0" className="vid giphy-embed" allowFullScreen></iframe>
             </div>
             :
             <div className="vid-wrap">
