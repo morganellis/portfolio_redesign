@@ -182,7 +182,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin: 15px 0 25px 0;
+    margin: 15px 0 10px 0;
     height: 250px;
     width: 100%;
 
@@ -217,6 +217,10 @@ body {
         width: 830px;
       }
     }
+  }
+
+  .gif {
+    margin-top: 4px !important;
   }
 
   .mobile-monitor-view {
