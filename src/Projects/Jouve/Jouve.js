@@ -21,19 +21,23 @@ export default function Jouve(props) {
         <p className="title">JOUVÉ</p>
       </div>
       <div className="project-details">
-        <div className="section">
+        <div className="vid-sect section">
           {checkIfMobile() === true ?
-            <img className="mobile-monitor-view" src={require("../../assets/img/work/slenderiiz/slenderiiz-monitor-view-mobile.png")} alt="Slenderiiz" />
+            <img className="mobile-monitor-view" src={require("../../assets/img/work/jouve/jouve-monitor-view.png")} alt="jouve" />
             :
             <div className="vid-wrap">
               <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
-              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/cqP3jlL.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/mnj3mg3.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             </div>
           }
         </div>
 
         <div className="section">
-          <img className="fullpage" src={require("../../assets/img/work/slenderiiz/slenderiiz-fullpage-purenourish.png")} alt="" />
+          {checkIfMobile() === true ?
+            <img className="fullpage" src={require("../../assets/img/work/jouve/jouve-fullpage-home.png")} alt="" />
+            :
+            <img className="fullpage" src={require("../../assets/img/work/jouve/jouve-fullpage-tight.png")} alt="" />
+          }
         </div>
 
         <div className="mobile-slider-wrap">
@@ -43,11 +47,15 @@ export default function Jouve(props) {
             </div>
             <Slider {...settings}>
               <div className="mobile-section section">
-                <img className="mobile-framed" src={require("../../assets/img/work/slenderiiz/slenderiiz-giving-greens-mobile.png")} alt="" />
+                <img className="mobile-framed" src={require("../../assets/img/work/jouve/jouve-mobile-science.png")} alt="" />
               </div>
 
               <div className="mobile-section section">
-                <img className="mobile-framed" src={require("../../assets/img/work/slenderiiz/slenderiiz-slenderiix-mobile.png")} alt="" />
+                <img className="mobile-framed" src={require("../../assets/img/work/jouve/jouve-mobile-celeb.png")} alt="" />
+              </div>
+
+              <div className="mobile-section section">
+                <img className="mobile-framed" src={require("../../assets/img/work/jouve/jouve-mobile-all-prods.png")} alt="" />
               </div>
             </Slider>
 
@@ -57,8 +65,17 @@ export default function Jouve(props) {
           </div>
         </div>
 
+        {checkIfMobile() === false && (
+          <div className="vid-sect section">
+            <div className="vid-wrap">
+              <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
+              <video className="celeb-vid vid" loop autoPlay muted><source src="https://i.imgur.com/HomuiX0.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+            </div>
+          </div>
+        )}
+
         <div className="section">
-          <img className="fullpage" src={require("../../assets/img/work/slenderiiz/slenderiiz-fullpage-home.png")} alt="" />
+          <img className="fullpage" src={require("../../assets/img/work/jouve/jouve-fullpage-app.png")} alt="" />
         </div>
 
       </div>
