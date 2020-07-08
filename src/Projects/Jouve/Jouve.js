@@ -26,7 +26,7 @@ export default function Jouve(props) {
             // <img src={require("../../assets/img/work/jouve/jouve-monitor-view.png")} alt="jouve" />
             <div className="vid-wrap">
               <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
-              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/f2sCHD2.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+              <video className="vid" autoPlay muted><source src="https://i.imgur.com/5snGQkL.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             </div>
             :
             <div className="vid-wrap">
