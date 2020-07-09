@@ -1,9 +1,47 @@
-.enrollment-wrap {
+.enroll-wrap {
+
   .banner {
-    background: url("../../assets//img/work/enrollment/enrollment-banner.png") no-repeat top center / cover;
+    background: url("../../assets/img/work/enrollment/enrollment-banner.png") no-repeat top center / cover;
   }
 
-   .title {
-     font-size: 50px;
-   }
+  .title {
+    font-size: 50px;
+  }
+
+  .project-details {
+     @media only screen and (min-width: 900px) {
+       margin-top: 50px;
+     }
+  }
+
+  .desktop-overlay {
+    margin-top: -8px;
+    height: 220px !important;
+    width: 280px;
+
+    @media only screen and (min-width: 900px) {
+      margin-top: -5px;
+      height: 642px !important;
+      width: 812px !important;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      height: 710px !important;
+      width: 900px !important;
+    }
+  }
+
+  .first-sect {
+    @media only screen and (min-width: 900px) {
+      margin-top: 475px;
+    }
+  }
+
+  .screenshot-sect {
+    margin-top: 50px;
+
+    @media only screen and (min-width: 900px) {
+      margin-top: 125px;
+    }
+  }
 }

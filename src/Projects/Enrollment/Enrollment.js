@@ -16,24 +16,32 @@ export default function Enrollment(props) {
   };
 
   return (
-    <div className="enrollment-wrap project-wrap">
+    <div className="enroll-wrap project-wrap">
       <div className="banner">
         <p className="title">ARIIX ENROLLMENT</p>
       </div>
       <div className="project-details">
         <div className="section">
-          {checkIfMobile() === true ?
-            <img className="mobile-monitor-view" src={require("../../assets/img/work/slenderiiz/slenderiiz-monitor-view-mobile.png")} alt="Slenderiiz" />
-            :
-            <div className="vid-wrap">
-              <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
-              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/cqP3jlL.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
-            </div>
-          }
+          <div className="vid-wrap">
+            <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
+            {checkIfMobile() === true ?
+              <iframe title="enroll" src="https://giphy.com/embed/H3Y3W2rTzfpXL8QHGD" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+              :
+              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/Qujm49k.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+            }
+          </div>
         </div>
 
-        <div className="section">
-          <img className="fullpage" src={require("../../assets/img/work/slenderiiz/slenderiiz-fullpage-purenourish.png")} alt="" />
+        <div className="first-sect section">
+          <img className="fullpage" src={require("../../assets/img/work/enrollment/enroll-home.png")} alt="" />
+        </div>
+
+        <div className="screenshot-sect section">
+          <img className="fullpage" src={require("../../assets/img/work/enrollment/enroll-pg-2.png")} alt="" />
+        </div>
+
+        <div className="screenshot-sect section">
+          <img className="fullpage" src={require("../../assets/img/work/enrollment/enroll-customize-modal.png")} alt="" />
         </div>
 
         <div className="mobile-slider-wrap">
@@ -43,11 +51,23 @@ export default function Enrollment(props) {
             </div>
             <Slider {...settings}>
               <div className="mobile-section section">
-                <img className="mobile-framed" src={require("../../assets/img/work/slenderiiz/slenderiiz-giving-greens-mobile.png")} alt="" />
+                <img className="mobile-framed" src={require("../../assets/img/work/enrollment/enroll-mobile-home.png")} alt="" />
               </div>
 
               <div className="mobile-section section">
-                <img className="mobile-framed" src={require("../../assets/img/work/slenderiiz/slenderiiz-slenderiix-mobile.png")} alt="" />
+                <img className="mobile-framed" src={require("../../assets/img/work/enrollment/enroll-mobile-pg-2.png")} alt="" />
+              </div>
+
+              <div className="mobile-section section">
+                <img className="mobile-framed" src={require("../../assets/img/work/enrollment/enroll-mobile-customize.png")} alt="" />
+              </div>
+
+              <div className="mobile-section section">
+                <img className="mobile-framed" src={require("../../assets/img/work/enrollment/enroll-mobile-customize-cart.png")} alt="" />
+              </div>
+
+              <div className="mobile-section section">
+                <img className="mobile-framed" src={require("../../assets/img/work/enrollment/enroll-mobile-business.png")} alt="" />
               </div>
             </Slider>
 
@@ -57,8 +77,28 @@ export default function Enrollment(props) {
           </div>
         </div>
 
-        <div className="section">
-          <img className="fullpage" src={require("../../assets/img/work/slenderiiz/slenderiiz-fullpage-home.png")} alt="" />
+        <div className="screenshot-sect section">
+          <img className="fullpage" src={require("../../assets/img/work/enrollment/enroll-your-sponsor.png")} alt="" />
+        </div>
+
+        <div className="screenshot-sect section">
+          <img className="fullpage" src={require("../../assets/img/work/enrollment/enroll-your-info.png")} alt="" />
+        </div>
+
+        <div className="screenshot-sect section">
+          <img className="fullpage" src={require("../../assets/img/work/enrollment/enroll-business.png")} alt="" />
+        </div>
+
+        <div className="screenshot-sect section">
+          <img className="fullpage" src={require("../../assets/img/work/enrollment/enroll-ship-and-pay.png")} alt="" />
+        </div>
+
+        <div className="screenshot-sect section">
+          <img className="fullpage" src={require("../../assets/img/work/enrollment/enroll-confirm-entries.png")} alt="" />
+        </div>
+
+        <div className="screenshot-sect section">
+          <img className="fullpage" src={require("../../assets/img/work/enrollment/enroll-pg-4.png")} alt="" />
         </div>
 
       </div>
