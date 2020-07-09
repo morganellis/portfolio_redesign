@@ -20,7 +20,6 @@ export default function Travel(props) {
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/4pDlnuT.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
           </div>
-          }
         </div>
 
         <div className="section">
