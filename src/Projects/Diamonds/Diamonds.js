@@ -93,7 +93,7 @@ export default function Diamonds(props) {
           </div>
         </div>
 
-        <div className="section">
+        <div className="below-vid-sect section">
           <img className="fullpage" src={require("../../assets/img/work/diamonds/diamonds-education.png")} alt="" />
         </div>
 
@@ -126,7 +126,7 @@ export default function Diamonds(props) {
           </div>
         </div>
 
-        <div className="below-vid-sect section">
+        <div className="section">
           <img className="fullpage" src={require("../../assets/img/work/diamonds/diamonds-account-orders.png")} alt="" />
         </div>
 
