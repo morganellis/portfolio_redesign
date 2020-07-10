@@ -9,8 +9,45 @@
     color: black;
   }
 
-  .mobile-monitor-view {
-    margin: 10px 0 55px 0;
-    width: 100%;
+  .project-details {
+    padding: 10px 30px !important;
+  }
+
+  .desktop-overlay {
+    top: -1.5px !important;
+    // top: 0;
+    height: 220px !important;
+    width: 279px !important;
+
+    @media only screen and (min-width: 900px) {
+      top: -5px !important;
+      height: 650px !important;
+      width: 812px !important;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      top: -8px !important;
+      height: 715px !important;
+      width: 900px !important;
+    }
+  }
+
+  .section {
+    margin-top: 50px;
+     @media only screen and (min-width: 900px) {
+       margin-top: 100px;
+     }
+  }
+
+  .mobile-slider-wrap {
+    margin-top: -30px;
+  }
+
+  .below-vid-sect {
+      margin-top: 25px;
+
+      @media only screen and (min-width: 900px) {
+      margin-top: 500px;
+    }
   }
 }
