@@ -10,9 +10,8 @@ export default function Main() {
   return (
     <div className="main-wrap">
       <LandingManual />
-      <Work />
       <About />
-      <Resume />
+      <Work />
       <Contact />
     </div>
   )

@@ -6,6 +6,8 @@ import Diamonds from "./Projects/Diamonds/Diamonds";
 import Enrollment from "./Projects/Enrollment/Enrollment";
 import Jouve from "./Projects/Jouve/Jouve";
 import Travel from "./Projects/Travel/Travel";
+import Resume from "./Resume/Resume";
+import Footer from "./Footer/Footer";
 
 function App() {
 
@@ -19,7 +21,9 @@ function App() {
         <Route path="/enrollment" component={Enrollment} />
         <Route path="/jouve" component={Jouve} />
         <Route path="/travel" component={Travel} />
+        <Route path="/resume" component={Resume} />
       </Switch>
+      <Footer />
     </div>
   );
 }
