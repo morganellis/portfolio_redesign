@@ -26,11 +26,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    @media only screen and (min-width: 900px) {
-      // justify-content: space-evenly;
-      // align-items: flex-start;
-    }
   }
 
   .col-1 {
@@ -84,7 +79,6 @@
 
     &:hover {
       background: rgb(255, 48, 114);
-
     }
 
     @media only screen and (min-width: 900px) {
