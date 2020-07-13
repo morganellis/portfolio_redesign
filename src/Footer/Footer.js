@@ -3,7 +3,7 @@ import "./footer.scss";
 
 export default function Footer() {
   return (
-    <div className={window.location.href.includes("hello") ? "ftr-border-blue footer-wrap" : "footer-wrap"}>
+    <div className={window.location.href.includes("hello") ? "ftr-blue-border footer-wrap" : "footer-wrap"}>
       <div className="col-1 col">
         <a href="https://www.linkedin.com/in/morgan-shiloh-ellis/" target="_blank" rel="noopener noreferrer"><img className="social-icon" src={require("../assets/img/main/linkedin-gray.png")} alt="LinkedIn" /></a>
         <a href="https://github.com/morganellis" target="_blank" rel="noopener noreferrer"><img className="social-icon" src={require("../assets/img/main/github-gray.png")} alt="GitHub" /></a>
