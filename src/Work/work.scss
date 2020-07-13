@@ -173,12 +173,12 @@
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
-  .no-bkg {
+  .ios-bkg {
     background-attachment: scroll;
   }
 }
 
-.no-bkg {
+.ios-bkg {
   //   background: none !important;
   background-attachment: scroll;
 }
