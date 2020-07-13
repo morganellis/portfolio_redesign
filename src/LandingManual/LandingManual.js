@@ -9,7 +9,7 @@ export default function LandingManual() {
 
   $(document).ready(function () {
     if (iOS) {
-      window.scrollTo(0, 100);
+      window.scrollTo(0, 1);
     };
   });
 
