@@ -1,9 +1,19 @@
 import React, { useState } from "react";
 import Fade from "react-reveal/Fade";
+import * as $ from "jquery";
 import "./landing-manual.scss";
 
 export default function LandingManual() {
   const [state, setState] = useState({ loading: true, img1Loaded: false, img2Loaded: false });
+  let iOS = navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+
+  $(document).ready(function () {
+    if (iOS) {
+      window.scrollTo(0, 100);
+    };
+  });
+
+
 
   return (
     <div className="landing-main">
