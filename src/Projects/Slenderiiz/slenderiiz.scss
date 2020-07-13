@@ -25,7 +25,7 @@
   }
 
   .vid-wrap {
-    @media only screen and (min-width: 900px) {
+      @media only screen and (min-width: 900px) {
       margin-top: 75px;
     }
   }
@@ -44,6 +44,12 @@
     @media only screen and (min-width: 900px) {
       margin-top: 50px;
       margin-bottom: 50px;
+    }
+  }
+
+  .vid {
+    @media only screen and (max-width: 900px) {
+      margin-top: -1px;
     }
   }
 }

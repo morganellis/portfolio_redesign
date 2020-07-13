@@ -172,6 +172,13 @@
   }
 }
 
-// .no-bkg {
-//   background: none !important;
-// }
+@supports (-webkit-overflow-scrolling: touch) {
+  .no-bkg {
+    background-attachment: scroll;
+  }
+}
+
+.no-bkg {
+  //   background: none !important;
+  background-attachment: scroll;
+}
