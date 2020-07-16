@@ -21,7 +21,18 @@ export default function Diamonds(props) {
         <p className="title">ARIIX DIAMONDS</p>
       </div>
 
-      <div className="project-details">
+      <div className="vid-sect section">
+        <div className="vid-wrap">
+          <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
+          {checkIfMobile() === true ?
+            <iframe title="diamonds-education" src="https://giphy.com/embed/XH55z6fv2fWwqgfjmk" frameBorder="0" class="celeb-gif gif vid giphy-embed" allowFullScreen></iframe>
+            :
+            <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/Rvm71fQ.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+          }
+        </div>
+      </div>
+
+      {/* <div className="project-details">
         <div className="vid-sect section">
           <div className="vid-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
@@ -31,7 +42,7 @@ export default function Diamonds(props) {
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/Z31uxVp.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
           </div>
-        </div>
+        </div> */}
 
         <div className="below-vid-sect section">
           <img className="fullpage" src={require("../../assets/img/work/diamonds/diamonds-home.png")} alt="" />
@@ -82,7 +93,7 @@ export default function Diamonds(props) {
           <img className="fullpage" src={require("../../assets/img/work/diamonds/diamonds-checkout.png")} alt="" />
         </div>
 
-        <div className="vid-sect section">
+        {/* <div className="vid-sect section">
           <div className="vid-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
@@ -91,9 +102,9 @@ export default function Diamonds(props) {
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/Rvm71fQ.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
           </div>
-        </div>
+        </div> */}
 
-        <div className="below-vid-sect section">
+        <div className="section">
           <img className="fullpage" src={require("../../assets/img/work/diamonds/diamonds-education.png")} alt="" />
         </div>
 
