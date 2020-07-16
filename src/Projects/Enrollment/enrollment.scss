@@ -9,25 +9,46 @@
   }
 
   .project-details {
-     @media only screen and (min-width: 900px) {
-       margin-top: 50px;
-     }
+    @media only screen and (min-width: 900px) {
+      margin-top: 50px;
+    }
   }
 
-  .desktop-overlay {
-    margin-top: -8px;
-    height: 220px !important;
-    width: 280px;
+  .enroll-desktop-overlay {
 
-    @media only screen and (min-width: 900px) {
-      margin-top: -5px;
-      height: 642px !important;
-      width: 812px !important;
+    @media only screen and (max-width: 374px) {
+      margin-top: -8px;
+      height: 220px !important;
     }
 
-    @media only screen and (min-width: 1200px) {
-      height: 710px !important;
-      width: 900px !important;
+    @media only screen and (min-width: 375px) {
+      margin-top: -10px;
+      height: 250px !important;
+    }
+
+    @media only screen and (min-width: 400px) {
+      height: 278px !important;
+    }
+
+    @media only screen and (min-width: 475px) {
+      height: 330px !important;
+    }
+
+    @media only screen and (min-width: 600px) {
+      height: 330px !important;
+    }
+  }
+
+  .enroll-gif {
+    
+    @media only screen and (min-width: 400px) {
+      height: 205px !important;
+      transform: translateY(-8px);
+    }
+
+    @media only screen and (min-width: 475px) {
+      height: 245px !important;
+      transform: translateY(-7px);
     }
   }
 

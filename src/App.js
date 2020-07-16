@@ -6,6 +6,7 @@ import Diamonds from "./Projects/Diamonds/Diamonds";
 import Enrollment from "./Projects/Enrollment/Enrollment";
 import Jouve from "./Projects/Jouve/Jouve";
 import Travel from "./Projects/Travel/Travel";
+import Test from "./Projects/Test/Test";
 import Resume from "./Resume/Resume";
 import Footer from "./Footer/Footer";
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/enrollment" component={Enrollment} />
         <Route path="/jouve" component={Jouve} />
         <Route path="/travel" component={Travel} />
+        <Route path="/test" component={Test} />
         <Route path="/resume" component={Resume} />
       </Switch>
       <Footer />

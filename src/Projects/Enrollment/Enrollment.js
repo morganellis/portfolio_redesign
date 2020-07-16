@@ -23,9 +23,9 @@ export default function Enrollment(props) {
       <div className="project-details">
         <div className="section">
           <div className="vid-wrap">
-            <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
+            <img className="enroll-desktop-overlay desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
-              <iframe title="enroll" src="https://giphy.com/embed/H3Y3W2rTzfpXL8QHGD" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+              <iframe title="enroll" src="https://giphy.com/embed/H3Y3W2rTzfpXL8QHGD" frameBorder="0" class="enroll-gif gif vid giphy-embed" allowFullScreen></iframe>
               :
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/Qujm49k.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }

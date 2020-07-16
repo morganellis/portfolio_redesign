@@ -1,0 +1,47 @@
+.test-wrap {
+  padding: 50px 30px;
+  // min-height: 80vh;
+
+  .vid-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+  }
+
+.desktop-overlay {
+  // position: absolute;
+  width: 100%;
+}
+
+.test-gif {
+  border: 1px solid pink;
+  padding: 0 30px;
+  margin-top: 0px;
+  height: 50vw;
+  // width: calc(100% - 68px);
+  transform: translateY(-600px);
+}
+
+.test-gif-wrap {
+  position: relative;
+  width: 100vw;
+}
+
+  // .desktop-overlay {
+  //   width: 100%;
+  // }
+
+  // .test-gif {
+  //   position: absolute;
+  //   top: 26px;
+  //   border: 1px solid pink;
+  //   height: 50vw;
+  //   width: calc(100% - 68px);
+  // }
+
+  // .test-gif-wrap {
+  //   position: relative;
+  //   width: 100vw;
+  // }
+}

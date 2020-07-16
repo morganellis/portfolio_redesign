@@ -133,6 +133,8 @@ body {
 }
 
 .mobile {
+  width: 100%;
+
   @media only screen and (min-width: 1200px) {
     display: none !important;
   }
@@ -145,6 +147,8 @@ body {
 }
 
 .project-wrap {
+
+  margin-bottom: 20px;
 
   @media only screen and (min-width: 900px) {
     margin-bottom: 50px;
@@ -189,21 +193,104 @@ body {
     height: 250px;
     width: 100%;
 
+    @media only screen and (min-width: 400px) {
+      margin-bottom: 65px;
+    }
+
+    @media only screen and (min-width: 475px) {
+      margin-bottom: 100px;
+    }
+
+    @media only screen and (min-width: 600px) {
+      margin-bottom: 190px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 315px;
+    }
+
     .desktop-overlay {
       position: absolute;
-      top: 3px;
       top: 0;
       height: 200px;
       width: 280px;
+      z-index: 9;
+
+      @media only screen and (min-width: 375px) {
+        height: 225px;
+        width: 318px;
+      }
+
+      @media only screen and (min-width: 400px) {
+        height: 248px;
+        width: 353px;
+      }
+
+      @media only screen and (min-width: 475px) {
+        height: 293px;
+        width: 415px;
+      }
+
+      @media only screen and (min-width: 600px) {
+        height: 380px;
+        width: 538px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        height: 500px;
+        width: 710px;
+      }
 
       @media only screen and (min-width: 900px) {
         height: 580px;
         width: 812px;
+        height: 585px;
+        width: 830px;
       }
 
       @media only screen and (min-width: 1200px) {
-        height: 640px;
+        height: 638px;
         width: 900px;
+      }
+    }
+
+    .gif {
+      margin-top: 4px !important;
+
+      @media only screen and (min-width: 375px) {
+        height: 170px;
+        width: 95%;
+        min-width: 294px;
+      }
+
+      @media only screen and (min-width: 400px) {
+        height: 185px;
+        min-width: 325px;
+      }
+
+      @media only screen and (min-width: 475px) {
+        height: 220px;
+        min-width: 385px;
+      }
+
+      @media only screen and (min-width: 600px) {
+        height: 290px;
+        min-width: 495px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        height: 383px;
+        min-width: 653px;
+      }
+
+      @media only screen and (min-width: 900px) {
+        height: 450px;
+        min-width: 765px;
+      }
+
+      @media only screen and (min-width: 1200px) {
+        height: 495px;
+        min-width: 765px;
       }
     }
 
@@ -211,19 +298,40 @@ body {
       margin-top: 10px;
       width: 258px;
 
+      @media only screen and (min-width: 375px) {
+        margin-top: 11px;
+        width: 294px;
+      }
+
+      @media only screen and (min-width: 400px) {
+        width: 325px;
+      }
+
+      @media only screen and (min-width: 475px) {
+        margin-top: 13px;
+        width: 383px;
+      }
+
+      @media only screen and (min-width: 600px) {
+        margin-top: 18px;
+        width: 495px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        margin-top: 23px;
+        width: 653px;
+      }
+
       @media only screen and (min-width: 900px) {
-        margin-top: 30px;
-        width: 750px;
+        margin-top: 28px;
+        width: 765px;
       }
 
       @media only screen and (min-width: 1200px) {
+        margin-top: 30px;
         width: 830px;
       }
     }
-  }
-
-  .gif {
-    margin-top: 4px !important;
   }
 
   .mobile-monitor-view {
