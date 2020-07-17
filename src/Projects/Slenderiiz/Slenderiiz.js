@@ -25,7 +25,7 @@ export default function Slenderiiz(props) {
           <div className="vid-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
-              <iframe title="slenderiiz" src="https://giphy.com/embed/d7AzrBk9cZPqAoVgyz" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+              <iframe title="slenderiiz" src="https://giphy.com/embed/idMZqKPvTG8inYImqn" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
               :
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/cqP3jlL.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
