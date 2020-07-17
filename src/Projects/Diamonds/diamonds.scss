@@ -1,5 +1,6 @@
 .diamonds-wrap {
   padding-bottom: 75px;
+
   .banner {
     background: url("../../assets/img/work/diamonds/ariix-style.jpg") no-repeat top center / cover;
     background: url("../../assets/img/work/diamonds/about-banner-bkg.jpg") no-repeat top center / cover;
@@ -35,9 +36,10 @@
 
   .section {
     margin-top: 50px;
-     @media only screen and (min-width: 900px) {
-       margin-top: 100px;
-     }
+
+    @media only screen and (min-width: 900px) {
+      margin-top: 100px;
+    }
   }
 
   .mobile-slider-wrap {
@@ -45,10 +47,19 @@
   }
 
   .below-vid-sect {
-      margin-top: 25px;
+    margin-top: 25px;
 
-      @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 900px) {
       margin-top: 500px;
+    }
+  }
+
+  .diamonds-gif {
+    @media only screen and (max-width: 899px) {
+      width: 258px;
+      height: 175px;
+      transform: translateY(-5px);
+      z-index: -1;
     }
   }
 }
