@@ -185,9 +185,34 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin: 15px 0 10px 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
     height: 250px;
     width: 100%;
+
+    // @media only screen and (min-width: 410px) {
+    //   margin-bottom: 60px;
+    // }
+
+    // @media only screen and (min-width: 475px) {
+    //   margin-top: 20px;
+    //   margin-bottom: 100px;
+    // }
+
+    @media only screen and (min-width: 500px) {
+      margin-top: 50px;
+      margin-bottom: 180px;
+    }
+
+    @media only screen and (min-width: 650px) {
+      margin-top: 50px;
+      margin-bottom: 250px;
+    }
+
+    @media only screen and (min-width: 750px) {
+      margin-top: 50px;
+      margin-bottom: 350px;
+    }
 
     .desktop-overlay {
       position: absolute;
@@ -195,6 +220,31 @@ body {
       top: 0;
       height: 200px;
       width: 280px;
+
+      // @media only screen and (min-width: 410px) and (max-width: 474px) {
+      //   height: 250px !important;
+      //   width: 355px !important;
+      // }
+
+      // @media only screen and (min-width: 475px) and (max-width: 499px) {
+      //   height: 290px !important;
+      //   width: 415px;
+      // }
+
+      @media only screen and (min-width: 500px) {
+        height: 320px;
+        width: 445px;
+      }
+
+      @media only screen and (min-width: 650px) {
+        height: 428px;
+        width: 590px;
+      }
+
+      @media only screen and (min-width: 750px) {
+        height: 505px;
+        width: 695px;
+      }
 
       @media only screen and (min-width: 900px) {
         height: 580px;
@@ -210,6 +260,32 @@ body {
     .vid {
       margin-top: 10px;
       width: 258px;
+      z-index: -1;
+
+      // @media only screen and (min-width: 410px) and (max-width: 474px) {
+      //   margin-top: 12px;
+      //   width: 326px;
+      // }
+
+      // @media only screen and (min-width: 475px) and (max-width: 499px) {
+      //   margin-top: 12px;
+      //   width: 382px;
+      // }
+
+      @media only screen and (min-width: 500px) {
+        margin-top: 17px;
+        width: 412px;
+      }
+
+      @media only screen and (min-width: 650px) {
+        margin-top: 25px;
+        width: 543px;
+      }
+
+      @media only screen and (min-width: 750px) {
+        margin-top: 30px;
+        width: 642px;
+      }
 
       @media only screen and (min-width: 900px) {
         margin-top: 30px;
@@ -224,6 +300,44 @@ body {
 
   .gif {
     margin-top: 4px !important;
+    z-index: -1;
+
+    // @media only screen and (min-width: 410px) {
+    //   margin-top: -45px !important;
+    //   height: 284px;
+    //   width: 445px;
+    // }
+
+    // @media only screen and (min-width: 475px) {
+    //   margin-top: -36px !important;
+    //   height: 301px;
+    //   width: 445px;
+    // }
+
+    @media only screen and (min-width: 500px) {
+      margin-top: -14px !important;
+      height: 283px;
+    }
+
+    @media only screen and (min-width: 650px) {
+      margin-top: 25px !important;
+      height: 290px;
+    }
+
+    @media only screen and (min-width: 750px) {
+      margin-top: 30px !important;
+      height: 340px;
+    }
+
+    @media only screen and (min-width: 900px) {
+      margin-top: 6px !important;
+      height: 441px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      margin-top: 30px !important;
+      height: 441px;
+    }
   }
 
   .mobile-monitor-view {

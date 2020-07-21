@@ -16,12 +16,33 @@
   }
 
   .desktop-overlay {
-    top: -1.5px !important;
-    // top: 0;
-    height: 220px !important;
-    width: 279px !important;
+    @media only screen and (max-width: 499px) {
+      top: -1.5px !important;
+      height: 220px !important;
+      width: 279px !important;
+    }
 
-    @media only screen and (min-width: 900px) {
+    // @media only screen and (min-width: 410px) and (max-width: 474px) {
+    //   height: 275px !important;
+    // }
+
+    // @media only screen and (min-width: 475px) and (max-width: 499px) {}
+
+    @media only screen and (min-width: 500px) and (max-width: 649px) {
+      height: 350px !important;
+    }
+
+    @media only screen and (min-width: 650px) and (max-width: 749px) {
+      height: 455px !important;
+      width: 588px !important;
+    }
+
+    @media only screen and (min-width: 750px) and (max-width: 899px) {
+      height: 555px !important;
+    }
+
+
+    @media only screen and (min-width: 900px) and (max-width: 1199px) {
       top: -5px !important;
       height: 650px !important;
       width: 812px !important;
@@ -49,12 +70,16 @@
   .below-vid-sect {
     margin-top: 25px;
 
+    @media only screen and (min-width: 650px) {
+      margin-top: 50px;
+    }
+
     @media only screen and (min-width: 900px) {
-      margin-top: 500px;
+      margin-top: 175px;
     }
 
     @media only screen and (min-width: 1200px) {
-      margin-top: 555px;
+      margin-top: 250px;
     }
   }
 

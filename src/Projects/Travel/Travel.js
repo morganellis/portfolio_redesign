@@ -13,7 +13,7 @@ export default function Travel(props) {
         <div className="section">
 
           <div className="vid-wrap">
-            <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
+            <img className="travel-desktop-overlay desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
               <iframe title="travel" src="https://giphy.com/embed/kBqnuFehR1LvWb8pqz" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
               :

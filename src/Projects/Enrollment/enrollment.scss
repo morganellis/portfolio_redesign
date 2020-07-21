@@ -9,23 +9,41 @@
   }
 
   .project-details {
-     @media only screen and (min-width: 900px) {
-       margin-top: 50px;
-     }
+    @media only screen and (min-width: 900px) {
+      margin-top: 50px;
+    }
   }
 
   .desktop-overlay {
-    margin-top: -8px;
-    height: 220px !important;
-    width: 280px;
+    @media only screen and (max-width: 499px) {
+      margin-top: -8px;
+      height: 220px !important;
+      width: 280px;
+    }
 
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 500px) and (max-width: 649px) {
+      margin-top: -2px;
+      height: 353px !important;
+    }
+
+    @media only screen and (min-width: 650px) and (max-width: 749px) {
+      margin-top: 0px;
+      height: 465px !important;
+    }
+
+    @media only screen and (min-width: 750px) and (max-width: 899px) {
+      margin-top: 0px;
+      height: 550px !important;
+    }
+
+    @media only screen and (min-width: 900px) and (max-width: 1199px) {
       margin-top: -5px;
       height: 642px !important;
       width: 812px !important;
     }
 
     @media only screen and (min-width: 1200px) {
+      margin-top: -9px;
       height: 710px !important;
       width: 900px !important;
     }

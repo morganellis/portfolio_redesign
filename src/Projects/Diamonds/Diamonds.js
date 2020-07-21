@@ -24,7 +24,7 @@ export default function Diamonds(props) {
       <div className="project-details">
         <div className="vid-sect section">
           <div className="vid-wrap">
-            <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
+            <img className="diamonds-desktop-overlay desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
               <iframe title="diamonds-education" src="https://giphy.com/embed/XH55z6fv2fWwqgfjmk" frameBorder="0" class="diamonds-gif gif vid giphy-embed" allowFullScreen></iframe>
               :

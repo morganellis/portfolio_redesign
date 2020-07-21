@@ -27,7 +27,7 @@ export default function Jouve(props) {
             {checkIfMobile() === true ?
               <iframe title="jouve" src="https://giphy.com/embed/SwHldGqQLQ9RUMhB6d" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
               :
-              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/mnj3mg3.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+              <video className="jouve-vid vid" loop autoPlay muted><source src="https://i.imgur.com/mnj3mg3.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function Jouve(props) {
             {checkIfMobile() === true ?
               <iframe title="jouve-celeb" src="https://giphy.com/embed/ci0AWSFfmbkgtMFuAv" frameBorder="0" class="celeb-gif gif vid giphy-embed" allowFullScreen></iframe>
               :
-              <video className="celeb-vid vid" loop autoPlay muted><source src="https://i.imgur.com/HomuiX0.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+              <video className="cel-vid vid" loop autoPlay muted><source src="https://i.imgur.com/HomuiX0.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
           </div>
         </div>

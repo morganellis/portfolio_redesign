@@ -37,17 +37,64 @@
     height: 250px;
     width: 100%;
 
-    .desktop-overlay {
-      position: absolute;
-      top: 3px;
-      top: 0;
-      width: 280px;
-    }
-
     .travel-slider {
       margin-top: 12px;
       width: 270px;
     }
+  }
+
+  .travel-desktop-overlay {
+    position: absolute;
+    top: 3px;
+    top: 0;
+    width: 280px;
+
+    // @media only screen and (min-width: 410px) and (max-width: 474px) {
+    //   height: 260px !important;
+    //   width: 350px !important;
+    // }
+
+    // @media only screen and (min-width: 475px) and (max-width: 499px) {
+    //   margin-top: -8px;
+    //   height: 295px !important;
+    //   width: 415px;
+    // }
+  }
+
+  .gif {
+    margin-top: 4px !important;
+    z-index: -1;
+
+    // @media only screen and (min-width: 410px) and (max-width: 474px) {
+    //   margin-top: -40px !important;
+    //   height: 285px !important;
+    //   width: 330px !important;
+    //   transform: translateX(1.5px);
+    // }
+
+    // @media only screen and (min-width: 475px) and (max-width: 499px) {
+    //   margin-top: -40px !important;
+    //   height: 301px !important;
+    //   width: 384px !important;
+    //   transform: translateX(1px);
+    // }
+
+    @media only screen and (min-width: 500px) and (max-width: 649px) {
+      transform: translateY(-18px);
+    }
+     @media only screen and (min-width: 650px) and (max-width: 749px) {
+       transform: translate(1px, 20px);
+     }
+
+      @media only screen and (min-width: 750px) and (max-width: 899px) {
+      height: 342px !important;
+      transform: translate(0px, 25px);
+      }
+
+      @media only screen and (min-width: 1200px) {
+      height: 443px;
+      transform: translate(1px, 25px);
+      }
   }
 
   .travel-desktop-view {
@@ -55,13 +102,13 @@
     width: 100%;
   }
 
-  .sect-below-vid {
-    @media only screen and (min-width: 900px) {
-      margin-top: 440px;
-    }
+  // .sect-below-vid {
+  //   @media only screen and (min-width: 900px) {
+  //     margin-top: 440px;
+  //   }
 
-     @media only screen and (min-width: 1200px) {
-       margin-top: 500px;
-     }
-  }
+  //    @media only screen and (min-width: 1200px) {
+  //      margin-top: 500px;
+  //    }
+  // }
 }
