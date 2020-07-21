@@ -25,7 +25,12 @@
   }
 
   .desktop-overlay {
-    height: 198px;
+    height: 197px !important;
+  }
+
+  .slen-gif {
+    transform: translateY(-2px);
+    z-index: -1;;
   }
 
   .vid-wrap {

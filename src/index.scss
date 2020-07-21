@@ -133,13 +133,13 @@ body {
 }
 
 .mobile {
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 900px) {
     display: none !important;
   }
 }
 
 .desktop {
-  @media only screen and (max-width: 1199px) {
+  @media only screen and (max-width: 899px) {
     display: none !important;
   }
 }

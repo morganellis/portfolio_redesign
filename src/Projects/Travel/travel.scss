@@ -48,4 +48,10 @@
     margin: 15px 0 60px 0;
     width: 100%;
   }
+
+  .sect-below-vid {
+    @media only screen and (min-width: 900px) {
+      margin-top: 450px;
+    }
+  }
 }

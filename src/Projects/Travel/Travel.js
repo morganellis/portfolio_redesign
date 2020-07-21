@@ -22,7 +22,7 @@ export default function Travel(props) {
           </div>
         </div>
 
-        <div className="section">
+        <div className="sect-below-vid section">
           <img className="fullpage" src={require("../../assets/img/work/travel/travel-desktop-home-2.png")} alt="" />
         </div>
 
