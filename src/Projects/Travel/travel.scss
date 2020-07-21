@@ -16,6 +16,12 @@
 
   }
 
+  .project-details {
+    @media only screen and (min-width: 900px) {
+      margin-top: 50px;
+    }
+  }
+
   .section {
     display: flex;
     justify-content: center;
@@ -51,7 +57,11 @@
 
   .sect-below-vid {
     @media only screen and (min-width: 900px) {
-      margin-top: 450px;
+      margin-top: 440px;
     }
+
+     @media only screen and (min-width: 1200px) {
+       margin-top: 500px;
+     }
   }
 }

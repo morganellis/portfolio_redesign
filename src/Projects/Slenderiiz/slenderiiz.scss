@@ -25,17 +25,27 @@
   }
 
   .desktop-overlay {
-    height: 197px !important;
+    @media only screen and (max-width: 899px) {
+      height: 197px !important;
+    }
   }
 
   .slen-gif {
-    transform: translateY(-2px);
-    z-index: -1;;
+    @media only screen and (max-width: 899px) {
+      transform: translateY(-2px);
+      z-index: -1;
+    }
   }
 
   .vid-wrap {
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 1200px) {
       margin-top: 75px;
+    }
+
+    .vid {
+      @media only screen and (min-width: 900px) {
+        transform: translateY(1px);
+      }
     }
   }
 
