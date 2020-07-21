@@ -70,12 +70,17 @@
     }
   }
 
-  .btn {
+  .contact-btn {
     cursor: pointer;
     background: #FA4D85;
     border: none;
-    padding: 20px 30px;
+    padding: 20px 0;
     transition: .15s ease-in-out;
+    text-decoration: none;
+    color: white;
+    font-size: 24px !important;
+    letter-spacing: 3px !important;
+    width: 300px !important;
 
     &:hover {
       background: rgb(255, 48, 114);
@@ -86,10 +91,26 @@
     }
   }
 
-  .btn-txt {
-    text-decoration: none;
-    color: white;
-    font-size: 24px;
-    letter-spacing: 3px;
-  }
+  // .btn {
+  //   cursor: pointer;
+  //   background: #FA4D85;
+  //   border: none;
+  //   padding: 20px 30px;
+  //   transition: .15s ease-in-out;
+
+  //   &:hover {
+  //     background: rgb(255, 48, 114);
+  //   }
+
+  //   @media only screen and (min-width: 900px) {
+  //     margin-top: 30px;
+  //   }
+  // }
+
+  // .btn-txt {
+  //   text-decoration: none;
+  //   color: white;
+  //   font-size: 24px;
+  //   letter-spacing: 3px;
+  // }
 }

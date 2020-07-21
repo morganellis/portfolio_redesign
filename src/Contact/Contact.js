@@ -12,7 +12,8 @@ export default function Contact() {
           <p className="para">Questions?  Comments? <br />Need some freelance work done? <br /> Just want to chat with a super awesome person? <br />Shoot me an email!</p>
           <div className="divider"></div>
           {/* <p className="para">morganellis.dev@gmail.com</p> */}
-          <button className="btn"><a className="btn-txt hdr" href="mailto: morganellis.dev@gmail.com">CONTACT ME</a></button>
+          <a className="contact-btn hdr" href="mailto: morganellis.dev@gmail.com">CONTACT ME</a>
+          {/* <button className="btn"><a className="btn btn-txt hdr" href="mailto: morganellis.dev@gmail.com">CONTACT ME</a></button> */}
         </div>
       </div>
     </div>
