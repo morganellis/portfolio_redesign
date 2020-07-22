@@ -7,52 +7,12 @@
   }
 
   .title {
-    font-size: 60px;
+    font-size: 50px;
     color: black;
   }
 
   .project-details {
     padding: 10px 30px !important;
-  }
-
-  .desktop-overlay {
-    @media only screen and (max-width: 499px) {
-      top: -1.5px !important;
-      height: 220px !important;
-      width: 279px !important;
-    }
-
-    // @media only screen and (min-width: 410px) and (max-width: 474px) {
-    //   height: 275px !important;
-    // }
-
-    // @media only screen and (min-width: 475px) and (max-width: 499px) {}
-
-    @media only screen and (min-width: 500px) and (max-width: 649px) {
-      height: 350px !important;
-    }
-
-    @media only screen and (min-width: 650px) and (max-width: 749px) {
-      height: 455px !important;
-      width: 588px !important;
-    }
-
-    @media only screen and (min-width: 750px) and (max-width: 899px) {
-      height: 555px !important;
-    }
-
-
-    @media only screen and (min-width: 900px) and (max-width: 1199px) {
-      top: -5px !important;
-      height: 650px !important;
-      width: 812px !important;
-    }
-
-    @media only screen and (min-width: 1200px) {
-      top: -8px !important;
-      height: 715px !important;
-      width: 900px !important;
-    }
   }
 
   .section {

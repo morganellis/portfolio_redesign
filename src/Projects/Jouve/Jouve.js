@@ -22,14 +22,23 @@ export default function Jouve(props) {
       </div>
       <div className="project-details">
         <div className="vid-sect section">
+
           <div className="vid-wrap">
+            <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
+            {checkIfMobile() === true ?
+              <iframe title="slenderiiz" loop autoPlay muted src="https://giphy.com/gifs/dvrwjt7giMQ5ldT7kV/html5" allow="autoplay; encrypted-media" frameBorder="0" class="slen-gif gif vid giphy-embed" allowFullScreen></iframe>
+              :
+              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/olsU4Lz.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+            }
+          </div>
+          {/* <div className="vid-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
               <iframe title="jouve" src="https://giphy.com/embed/SwHldGqQLQ9RUMhB6d" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
               :
               <video className="jouve-vid vid" loop autoPlay muted><source src="https://i.imgur.com/mnj3mg3.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
-          </div>
+          </div> */}
         </div>
 
         <div className="section">
