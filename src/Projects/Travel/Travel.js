@@ -15,14 +15,15 @@ export default function Travel(props) {
           <div className="vid-wrap">
             <img className="travel-desktop-overlay desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
-              <iframe title="travel" src="https://giphy.com/embed/kBqnuFehR1LvWb8pqz" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+              // <iframe title="travel" src="https://giphy.com/embed/kBqnuFehR1LvWb8pqz" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+              <iframe title="travel" loop autoPlay muted src="https://giphy.com/gifs/lpt44CNIBsmqTbHMyv/html5" allow="autoplay; encrypted-media" frameBorder="0" class="travel-gif gif vid giphy-embed" allowFullScreen></iframe>
               :
-              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/4pDlnuT.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/ApZIB9X.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
           </div>
         </div>
 
-        <div className="sect-below-vid section">
+        <div className="section">
           <img className="fullpage" src={require("../../assets/img/work/travel/travel-desktop-home-2.png")} alt="" />
         </div>
 

@@ -1,7 +1,5 @@
 .slenderiiz-wrap {
-  @media only screen and (min-width: 500px) {
-    margin-bottom: 75px;
-  }
+  margin-bottom: 50px;
 
   .banner {
     background: url("../../assets/img/work/slenderiiz/slenderiiz-banner.jpg") no-repeat top center / cover;
@@ -24,91 +22,10 @@
     width: 100%;
   }
 
-  .desktop-overlay {
-
-    // @media only screen and (min-width: 410px) and (max-width: 474px) {
-    //   height: 250px !important;
-    //   width: 355px !important;
-    // }
-
-    // @media only screen and (min-width: 475px) and (max-width: 499px) {
-    //   height: 290px !important;
-    //   width: 415px;
-    //   transform: translateX(-0.5px) !important;
-    // }
-
-    @media only screen and (max-width: 499px) {
-      height: 197px !important;
-    }
-
-    @media only screen and (min-width: 650px) and (max-width: 749px) {
-      margin-top: 4px !important;
-      height: 420px !important;
-      width: 589px !important;
-    }
-
-    @media only screen and (min-width: 750px) and (max-width: 899px) {
-      margin-top: 3px !important;
-      height: 498px !important;
-    }
-
-
-    @media only screen and (min-width: 900px) and (max-width: 1199px) {}
-  }
-
-  .slen-gif {
-    @media only screen and (max-width: 899px) {
-      transform: translateY(-2px);
-      z-index: -1;
-    }
-  }
-
-  .vid-wrap {
-    @media only screen and (min-width: 1200px) {
-      margin-top: 75px;
-    }
-
-    .vid {
-
-      // @media only screen and (min-width: 410px) and (max-width: 474px) {
-      //   transform: translateX(1px);
-      // }
-
-      @media only screen and (min-width: 900px) {
-        transform: translateY(1px);
-      }
-    }
-  }
-
-
-  .fullpage-sect {
-    @media only screen and (min-width: 500px) {
-      margin-top: -15px;
-    }
-
-    @media only screen and (min-width: 650px) {
-      margin-top: 15px;
-    }
-
-    @media only screen and (min-width: 900px) {
-      margin-top: 75px;
-    }
-
-    @media only screen and (min-width: 1200px) {
-      margin-top: 150px;
-    }
-  }
-
   .mobile-slider-wrap {
     @media only screen and (min-width: 900px) {
       margin-top: 50px;
       margin-bottom: 50px;
-    }
-  }
-
-  .vid {
-    @media only screen and (max-width: 900px) {
-      margin-top: -2px;
     }
   }
 }

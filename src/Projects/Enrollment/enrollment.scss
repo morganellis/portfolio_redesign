@@ -8,62 +8,37 @@
     font-size: 50px;
   }
 
-  .project-details {
-    @media only screen and (min-width: 900px) {
-      margin-top: 50px;
-    }
-  }
-
-  .desktop-overlay {
-    @media only screen and (max-width: 499px) {
-      margin-top: -8px;
-      height: 220px !important;
-      width: 280px;
-    }
-
-    @media only screen and (min-width: 500px) and (max-width: 649px) {
-      margin-top: -2px;
-      height: 353px !important;
-    }
-
-    @media only screen and (min-width: 650px) and (max-width: 749px) {
-      margin-top: 0px;
-      height: 465px !important;
-    }
-
-    @media only screen and (min-width: 750px) and (max-width: 899px) {
-      margin-top: 0px;
-      height: 550px !important;
-    }
-
-    @media only screen and (min-width: 900px) and (max-width: 1199px) {
-      margin-top: -5px;
-      height: 642px !important;
-      width: 812px !important;
-    }
-
-    @media only screen and (min-width: 1200px) {
-      margin-top: -9px;
-      height: 710px !important;
-      width: 900px !important;
-    }
-  }
-
-  .first-sect {
-    @media only screen and (min-width: 900px) {
-      margin-top: 475px;
-    }
-
-    @media only screen and (min-width: 1200px) {
-      margin-top: 555px;
-    }
-  }
 
   .screenshot-sect {
     margin-top: 50px;
 
-    @media only screen and (min-width: 900px) {
-      margin-top: 125px;
+    @media only screen and (min-width: 650px) {
+      margin-top: 100px;
+    }
+  }
+
+  .enroll-desktop-overlay {
+    height: 71vw !important;
+
+    @media only screen and (min-width: 1200px) {
+      height: 590px !important;
+    }
+  }
+
+  .mobile-enroll-desktop-overlay {
+    height: 69.5vw !important;
+    width: 98% !important;
+
+  }
+
+  .enroll-gif {
+    height: 68% !important;
+    width: 91% !important;
+  }
+
+  .customize-modal {
+    @media only screen and (min-width: 650px) {
+      margin-bottom: 20px;
     }
   }
 }
