@@ -16,6 +16,14 @@
 
   }
 
+  .title {
+    @media only screen and (max-width: 500px) {
+      font-size: 15vw;
+    }
+
+    font-size: 75px;
+  }
+
   .section {
     display: flex;
     justify-content: center;

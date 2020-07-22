@@ -18,7 +18,8 @@ export default function Enrollment(props) {
   return (
     <div className="enroll-wrap project-wrap">
       <div className="banner">
-        <p className="title">ARIIX ENROLLMENT</p>
+        <p className="title">ARIIX</p>
+        <p className="title">ENROLLMENT</p>
       </div>
       <div className="project-details">
         <div className="section">
