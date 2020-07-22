@@ -25,11 +25,20 @@ export default function Slenderiiz(props) {
           <div className="vid-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
+              // <iframe title="slenderiiz" src="https://giphy.com/embed/Yq7lpXzBNhkOkjfi4V" frameBorder="0" class="slen-gif gif vid giphy-embed" allowFullScreen></iframe>
+              <iframe title="slenderiiz" loop autoPlay muted src="https://giphy.com/gifs/UTBGkbzH44xLgS5vgF/html5" frameBorder="0" class="slen-gif gif vid giphy-embed" allowFullScreen></iframe>
+              :
+              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/AfzQ4ZF.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+            }
+          </div>
+          {/* <div className="vid-wrap">
+            <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
+            {checkIfMobile() === true ?
               <iframe title="slenderiiz" src="https://giphy.com/embed/idMZqKPvTG8inYImqn" frameBorder="0" class="slen-gif gif vid giphy-embed" allowFullScreen></iframe>
               :
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/cqP3jlL.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
-          </div>
+          </div> */}
         </div>
 
         <div className="fullpage-sect section">
