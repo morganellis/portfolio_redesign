@@ -32,8 +32,12 @@ export default function Diamonds(props) {
 
       {/* {state.loading && (<div id="loadWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)} */}
       {/* https://cdn.dribbble.com/users/1689609/screenshots/5027678/geometry.gif */}
+      {/* https://digitalsynopsis.com/wp-content/uploads/2016/06/loading-animations-preloader-gifs-ui-ux-effects-11.gif */}
+      {/* https://i.pinimg.com/originals/d2/4d/db/d24ddb8271b8ea9b4bbf4b67df8cbc01.gif */}
+      {/* https://i.pinimg.com/originals/fc/14/9d/fc149d89a9665a5bd2309e0c398e6e20.gif */}
+      {/* https://media.tenor.com/images/582d613c296a1ea734dea99f87b13886/tenor.gif */}
 
-      {state.loading && (<div id="loadWrap" className="full-load-wrap"><img src="https://digitalsynopsis.com/wp-content/uploads/2016/06/loading-animations-preloader-gifs-ui-ux-effects-11.gif" alt="Loading..." /></div>)}
+      {state.loading && (<div id="loadWrap" className="full-load-wrap"><img className="load-img" src="https://i.pinimg.com/originals/fc/14/9d/fc149d89a9665a5bd2309e0c398e6e20.gif" alt="Loading..." /></div>)}
 
       <div className="project-details">
         <div className="vid-sect section">
