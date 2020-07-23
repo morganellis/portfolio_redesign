@@ -76,7 +76,7 @@ export default function Jouve(props) {
           <img className="fullpage" src={require("../../assets/img/work/jouve/jouve-fullpage-tight.png")} alt="" />
         </div>
 
-        <div className="second-vid vid-sect section">
+        <div className="jouve-vid second-vid vid-sect section">
           <div className="vid-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
