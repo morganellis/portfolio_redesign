@@ -68,6 +68,52 @@ body {
   display: none;
 }
 
+.project-loading-wrap {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 999999999999;
+  background-image: url("./assets/img/main/landing-bkg-xsmall-mobile.png") no-repeat top center / cover;
+
+  @media only screen and (min-width: 450px) {
+    background: url("./assets/img/main/landing-bkg-medium-mobile.png") no-repeat top center / cover;
+  }
+
+  @media only screen and (min-width: 550px) {
+    background: url("./assets/img/main/landing-bkg-tablet.png") no-repeat top center / cover;
+  }
+
+  @media only screen and (min-width: 800px) {
+    background: url("./assets/img/main/landing-bkg-tablet-landscape.png") no-repeat top center / cover;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    background: url("./assets/img/main/landing-bkg-medium-desktop.png") no-repeat top center / cover;
+  }
+
+  @media only screen and (min-width: 1400px) {
+    background: url("./assets/img/main/landing-bkg-desktop.png") no-repeat top center / cover;
+  }
+}
+
+.loading-bkg {
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: white;
+}
+
 .loading-wrap {
   position: fixed;
   display: flex;
@@ -81,7 +127,8 @@ body {
   z-index: 999999999999;
 }
 
-.lds-ring {
+.loading-ring {
+  z-index: 999;
   display: inline-block;
   position: relative;
   width: 80px;
@@ -95,10 +142,10 @@ body {
   width: 64px;
   height: 64px;
   margin: 8px;
-  border: 8px solid #CBCCCE;
+  border: 8px solid  #FA4D85;
   border-radius: 50%;
   animation: loading-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #CBCCCE transparent transparent transparent;
+  border-color:  #FA4D85 transparent transparent transparent;
 }
 
 .loading-ring div:nth-child(1) {
@@ -291,8 +338,9 @@ body {
 
   .gif {
     height: 47vw;
-  @media only screen and (min-width: 1200px) {
-    height: 390px;
+
+    @media only screen and (min-width: 1200px) {
+      height: 390px;
     }
   }
 }

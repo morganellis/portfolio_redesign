@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import { checkIfMobile } from "../../utils/helpers";
 import "./diamonds.scss";
 
 export default function Diamonds(props) {
+  const [state, setState] = useState({ loading: true });
 
   var settings = {
     dots: true,
@@ -21,18 +22,20 @@ export default function Diamonds(props) {
         <p className="title">ARIIX DIAMONDS</p>
       </div>
 
+      {state.loading && (<div><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)}
+
       <div className="project-details">
         <div className="vid-sect section">
-          <div className="vid-wrap">
+          <div className="vid-wrap" onLoad={() => setState({ loading: false })}>
             <img className="diamonds-desktop-overlay desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
               <iframe title="diamonds-education" loop autoPlay muted src="https://giphy.com/gifs/fq6yImeRAPR3FGMcek/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
               :
-              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/7lQ4vhg.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+              <video onLoad={() => setState({ loading: false })} className="vid" loop autoPlay muted><source src="https://i.imgur.com/7lQ4vhg.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
           </div>
         </div>
-        
+
         {/* <div className="vid-sect section">
           <div className="vid-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
