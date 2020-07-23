@@ -22,7 +22,7 @@ export default function Travel(props) {
 
       <div className="project-details">
         <div className="section">
-          <div className="vid-wrap">
+          <div className="first-vid vid-wrap">
             <img className="travel-desktop-overlay desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
               <iframe onLoad={doneLoading} title="travel" loop autoPlay muted src="https://giphy.com/gifs/lpt44CNIBsmqTbHMyv/html5" allow="autoplay; encrypted-media" frameBorder="0" class="travel-gif gif vid giphy-embed" allowFullScreen></iframe>
