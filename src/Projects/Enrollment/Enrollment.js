@@ -34,7 +34,7 @@ export default function Enrollment(props) {
 
       <div className="project-details">
         <div className="section">
-          <div className="vid-wrap">
+          <div className="first-vid vid-wrap">
             <img className={checkIfMobile() === true ? "mobile-enroll-desktop-overlay enroll-desktop-overlay desktop-overlay" : "enroll-desktop-overlay desktop-overlay"} src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
               <iframe onLoad={doneLoading} title="enroll" loop autoPlay muted src="https://giphy.com/gifs/KxVgo2QHlVLdZ3RHQh/html5" allow="autoplay; encrypted-media" frameBorder="0" class="enroll-gif gif vid giphy-embed" allowFullScreen></iframe>
