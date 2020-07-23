@@ -5,10 +5,10 @@ import { checkIfMobile } from "../../utils/helpers";
 import "./diamonds.scss";
 
 export default function Diamonds(props) {
-  const [state, setState] = useState({ loading: true });
+  const [state, setState] = useState({ loading: checkIfMobile() === true ? true : false });
 
   function doneLoading() {
-    $("#loading").fadeOut();
+    $("#loadingWrap").fadeOut();
     setTimeout(() => {
       setState({ loading: false });
     }, 200);
@@ -30,7 +30,7 @@ export default function Diamonds(props) {
         <p className="title">ARIIX DIAMONDS</p>
       </div>
 
-      {state.loading && (<div id="loading"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)}
+      {state.loading && (<div id="loadingWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)}
 
       <div className="project-details">
         <div className="vid-sect section">
@@ -39,7 +39,7 @@ export default function Diamonds(props) {
             {checkIfMobile() === true ?
               <iframe onLoad={doneLoading} title="diamonds-education" loop autoPlay muted src="https://giphy.com/gifs/fq6yImeRAPR3FGMcek/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
               :
-              <video onLoad={doneLoading} className="vid" loop autoPlay muted><source src="https://i.imgur.com/7lQ4vhg.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/7lQ4vhg.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
           </div>
         </div>
