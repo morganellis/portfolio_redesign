@@ -65,7 +65,7 @@ body {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .project-loading-wrap {
@@ -114,6 +114,16 @@ body {
   background: white;
 }
 
+.load-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  // padding-bottom: 47vw;
+  // height: 47vw;
+  // width: 100%;
+}
+
 .loading-wrap {
   position: fixed;
   display: flex;
@@ -142,10 +152,10 @@ body {
   width: 64px;
   height: 64px;
   margin: 8px;
-  border: 8px solid  #FA4D85;
+  border: 8px solid #FA4D85;
   border-radius: 50%;
   animation: loading-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color:  #FA4D85 transparent transparent transparent;
+  border-color: #FA4D85 transparent transparent transparent;
 }
 
 .loading-ring div:nth-child(1) {

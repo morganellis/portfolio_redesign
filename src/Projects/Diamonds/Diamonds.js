@@ -8,7 +8,7 @@ export default function Diamonds(props) {
   const [state, setState] = useState({ loading: checkIfMobile() === true ? true : false });
 
   function doneLoading() {
-    $("#loadingWrap").fadeOut();
+    $("#loadWrap").fadeOut();
     setTimeout(() => {
       setState({ loading: false });
     }, 200);
@@ -30,7 +30,7 @@ export default function Diamonds(props) {
         <p className="title">ARIIX DIAMONDS</p>
       </div>
 
-      {state.loading && (<div id="loadingWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)}
+      {state.loading && (<div id="loadWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)}
 
       <div className="project-details">
         <div className="vid-sect section">

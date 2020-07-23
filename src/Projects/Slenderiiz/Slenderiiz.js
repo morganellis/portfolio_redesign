@@ -1,9 +1,15 @@
 import React from "react";
 import Slider from "react-slick";
+import * as $ from "jquery";
 import { checkIfMobile } from "../../utils/helpers";
 import "./slenderiiz.scss";
 
 export default function Slenderiiz(props) {
+
+  function doneLoading() {
+    $("#loadWrap").addClass("hide");
+    $("#gif").removeClass("hide");
+  }
 
   var settings = {
     dots: true,
@@ -22,13 +28,18 @@ export default function Slenderiiz(props) {
       </div>
       <div className="project-details">
         <div className="section">
-          <div className="vid-wrap">
+          {/* <div id="loadWrap" className="vid-wrap load-container"><div id="loading"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div> */}
+
+          <div></div>
+
+          <div className="vid-wrap" id="vidWrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
-              <iframe title="slenderiiz" loop autoPlay muted src="https://giphy.com/gifs/UTBGkbzH44xLgS5vgF/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+              <iframe onLoad={doneLoading} title="slenderiiz" loop autoPlay muted src="https://giphy.com/gifs/UTBGkbzH44xLgS5vgF/html5" allow="autoplay; encrypted-media" frameBorder="0" id="gif" className="gif vid giphy-embed hide" allowFullScreen></iframe>
               :
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/AfzQ4ZF.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
+            <div id="loadWrap" className="load-container gif vid giphy-embed"><div id="loading"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>
           </div>
         </div>
 
