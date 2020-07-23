@@ -30,7 +30,9 @@ export default function Diamonds(props) {
         <p className="title">ARIIX DIAMONDS</p>
       </div>
 
-      {state.loading && (<div id="loadWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)}
+      {/* {state.loading && (<div id="loadWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)} */}
+
+      {state.loading && (<div id="loadWrap" className="full-load-wrap"><img src="https://cdn.dribbble.com/users/1689609/screenshots/5027678/geometry.gif" className="load-img" alt="Loading..." /></div>)}
 
       <div className="project-details">
         <div className="vid-sect section">

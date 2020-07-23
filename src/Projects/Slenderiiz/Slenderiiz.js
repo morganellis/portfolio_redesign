@@ -28,9 +28,7 @@ export default function Slenderiiz(props) {
       </div>
       <div className="project-details">
         <div className="section">
-          {/* <div id="loadWrap" className="vid-wrap load-container"><div id="loading"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div> */}
-
-          <div></div>
+          <div id="loadWrap" className="vid-wrap load-container"><div id="loading"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>
 
           <div className="vid-wrap" id="vidWrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />

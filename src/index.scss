@@ -68,6 +68,24 @@ body {
   display: none !important;
 }
 
+.full-load-wrap {
+  z-index: 99;
+  background: white;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.load-img {
+  height: auto;
+  width: 80vw;
+}
+
 .project-loading-wrap {
   position: fixed;
   display: flex;
