@@ -38,7 +38,7 @@ export default function Slenderiiz(props) {
 
       <div className="project-details">
         <div className="section">
-          <div className="vid-wrap">
+          <div className="first-vid vid-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
               <iframe onLoad={doneLoading} title="slenderiiz" loop autoPlay muted src="https://giphy.com/gifs/UTBGkbzH44xLgS5vgF/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
@@ -48,8 +48,9 @@ export default function Slenderiiz(props) {
           </div>
         </div>
 
-        <div className="fullpage-sect section">
-          <img className="fullpage" src={require("../../assets/img/work/slenderiiz/slenderiiz-fullpage-purenourish.png")} alt="" />
+
+        <div className="section">
+          <img className="fullpage" src={require("../../assets/img/work/slenderiiz/slenderiiz-fullpage-home.png")} alt="" />
         </div>
 
         <div className="mobile-slider-wrap">
@@ -74,7 +75,18 @@ export default function Slenderiiz(props) {
         </div>
 
         <div className="section">
-          <img className="fullpage" src={require("../../assets/img/work/slenderiiz/slenderiiz-fullpage-home.png")} alt="" />
+          <div className="second-slen-vid vid-wrap">
+            <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
+            {checkIfMobile() === true ?
+              <iframe onLoad={doneLoading} title="slenderiiz-tooltip" loop autoPlay muted src="https://giphy.com/gifs/LmSufA9PJjyN6auD3h/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+              :
+              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/oiTLPnJ.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+            }
+          </div>
+        </div>
+
+        <div className="fullpage-sect section">
+          <img className="fullpage" src={require("../../assets/img/work/slenderiiz/slenderiiz-fullpage-purenourish.png")} alt="" />
         </div>
 
       </div>

@@ -36,7 +36,7 @@ export default function Diamonds(props) {
           <div className="vid-wrap">
             <img className="diamonds-desktop-overlay desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
-              <iframe onLoad={doneLoading} title="diamonds-education" loop autoPlay muted src="https://giphy.com/gifs/fq6yImeRAPR3FGMcek/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+              <iframe onLoad={doneLoading} title="diamonds" loop autoPlay muted src="https://giphy.com/gifs/fq6yImeRAPR3FGMcek/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
               :
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/7lQ4vhg.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
@@ -84,16 +84,23 @@ export default function Diamonds(props) {
           <img className="fullpage" src={require("../../assets/img/work/diamonds/diamonds-review-modal.png")} alt="" />
         </div>
 
+        <div className="vid-sect section">
+          <div className="vid-wrap">
+            <img className="diamonds-desktop-overlay desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
+            {checkIfMobile() === true ?
+              <iframe onLoad={doneLoading} title="diamonds-product" loop autoPlay muted src="https://giphy.com/gifs/UTwPCq3dvhORkEoqDF/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+              :
+              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/Qgnw9H1.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+            }
+          </div>
+        </div>
+
         <div className="section">
           <img className="fullpage" src={require("../../assets/img/work/diamonds/diamonds-review-cart.png")} alt="" />
         </div>
 
         <div className="section">
           <img className="fullpage" src={require("../../assets/img/work/diamonds/diamonds-checkout.png")} alt="" />
-        </div>
-
-        <div className="section">
-          <img className="fullpage" src={require("../../assets/img/work/diamonds/diamonds-education.png")} alt="" />
         </div>
 
         <div className="mobile-slider-wrap">
@@ -135,6 +142,21 @@ export default function Diamonds(props) {
 
         <div className="section">
           <img className="fullpage" src={require("../../assets/img/work/diamonds/diamonds-saved-items.png")} alt="" />
+        </div>
+
+        <div className="vid-sect section">
+          <div className="vid-wrap">
+            <img className="diamonds-desktop-overlay desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
+            {checkIfMobile() === true ?
+              <iframe onLoad={doneLoading} title="diamonds-request" loop autoPlay muted src="https://giphy.com/gifs/iDOPoUPn2z4ur9XeUM/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+              :
+              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/7GpHogP.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
+            }
+          </div>
+        </div>
+
+        <div className="section">
+          <img className="fullpage" src={require("../../assets/img/work/diamonds/diamonds-education.png")} alt="" />
         </div>
 
       </div>
