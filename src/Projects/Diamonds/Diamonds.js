@@ -8,8 +8,8 @@ export default function Diamonds(props) {
   const [state, setState] = useState({ loading: checkIfMobile() === true ? true : false });
 
   function doneLoading() {
-    $("#loadWrap").fadeOut();
-    // $("#loadWrap").addClass("hide");
+    // $("#loadWrap").fadeOut();
+    $("#loadWrap").addClass("hide");
     setTimeout(() => {
       setState({ loading: false });
     }, 200);
@@ -31,17 +31,7 @@ export default function Diamonds(props) {
         <p className="title">ARIIX DIAMONDS</p>
       </div>
 
-      {/* {state.loading && (<div id="loadWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)} */}
-      {/* https://cdn.dribbble.com/users/1689609/screenshots/5027678/geometry.gif */}
-      {/* https://digitalsynopsis.com/wp-content/uploads/2016/06/loading-animations-preloader-gifs-ui-ux-effects-11.gif */}
-      {/* https://i.pinimg.com/originals/d2/4d/db/d24ddb8271b8ea9b4bbf4b67df8cbc01.gif */}
-      {/* https://i.pinimg.com/originals/fc/14/9d/fc149d89a9665a5bd2309e0c398e6e20.gif */}
-      {/* https://media.tenor.com/images/582d613c296a1ea734dea99f87b13886/tenor.gif */}
-      {/* https://thumbs.gfycat.com/LongShortAustraliancurlew-size_restricted.gif */}
-      {/* https://steamuserimages-a.akamaihd.net/ugc/779615184453193381/6545C065131A71752DEC0EB8EFF64A166177DCFD/ */}
-      {/* https://thumbs.gfycat.com/BlushingFlashyGlobefish-small.gif */}
-
-      {state.loading && (<div id="loadWrap" className="full-load-wrap"><img className="load-img" src="https://i.pinimg.com/originals/94/c8/ab/94c8ab2e6caafde74a4a483394ba3d78.gif" alt="Loading..." /></div>)}
+      {state.loading && (<div id="loadWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)}
 
       <div className="project-details">
         <div className="vid-sect section">
