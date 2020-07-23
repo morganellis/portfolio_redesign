@@ -8,10 +8,11 @@ export default function Diamonds(props) {
   const [state, setState] = useState({ loading: checkIfMobile() === true ? true : false });
 
   function doneLoading() {
-    $("#loadWrap").fadeOut();
+    // $("#loadWrap").fadeOut();
+    $("#loadWrap").addClass("hide");
     setTimeout(() => {
       setState({ loading: false });
-    }, 300);
+    }, 200);
   };
 
   var settings = {
@@ -36,8 +37,9 @@ export default function Diamonds(props) {
       {/* https://i.pinimg.com/originals/d2/4d/db/d24ddb8271b8ea9b4bbf4b67df8cbc01.gif */}
       {/* https://i.pinimg.com/originals/fc/14/9d/fc149d89a9665a5bd2309e0c398e6e20.gif */}
       {/* https://media.tenor.com/images/582d613c296a1ea734dea99f87b13886/tenor.gif */}
+      {/* https://thumbs.gfycat.com/LongShortAustraliancurlew-size_restricted.gif */}
 
-      {state.loading && (<div id="loadWrap" className="full-load-wrap"><img className="load-img" src="https://i.pinimg.com/originals/fc/14/9d/fc149d89a9665a5bd2309e0c398e6e20.gif" alt="Loading..." /></div>)}
+      {state.loading && (<div id="loadWrap" className="full-load-wrap"><img className="load-img" src="https://thumbs.gfycat.com/LongShortAustraliancurlew-size_restricted.gif" alt="Loading..." /></div>)}
 
       <div className="project-details">
         <div className="vid-sect section">
