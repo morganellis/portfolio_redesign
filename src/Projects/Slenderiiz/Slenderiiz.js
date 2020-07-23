@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import * as $ from "jquery";
+import Loader from "../../Loader/Loader";
 import { checkIfMobile } from "../../utils/helpers";
 import "./slenderiiz.scss";
 
@@ -8,13 +9,13 @@ export default function Slenderiiz(props) {
   const [state, setState] = useState({ loading: checkIfMobile() === true ? true : false });
 
   function doneLoading() {
-    $("#loadWrap").fadeOut();
-    // $("#loadWrap").addClass("hide");
-    setTimeout(() => {
-      setState({ loading: false });
-    }, 200);
+    $("#loadWrap").addClass("hide");
+    setState({ loading: false });
+    // $("#loadWrap").fadeOut();
+    // setTimeout(() => {
+    //   setState({ loading: false });
+    // }, 200);
   };
-
 
   var settings = {
     dots: true,
@@ -32,7 +33,8 @@ export default function Slenderiiz(props) {
         <p className="title">SLENDERIIZ</p>
       </div>
 
-      {state.loading && (<div id="loadWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)}
+      {state.loading && (<Loader />)}
+      {/* {state.loading && (<div id="loadWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)} */}
 
       <div className="project-details">
         <div className="section">

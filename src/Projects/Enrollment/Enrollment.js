@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
+import * as $ from "jquery";
+import Loader from "../../Loader/Loader";
 import { checkIfMobile } from "../../utils/helpers";
 import "./enrollment.scss";
 
 export default function Enrollment(props) {
+  const [state, setState] = useState({ loading: checkIfMobile() === true ? true : false });
+
+  function doneLoading() {
+    $("#loadWrap").addClass("hide");
+    setState({ loading: false });
+  };
 
   var settings = {
     dots: true,
@@ -21,13 +29,15 @@ export default function Enrollment(props) {
         <p className="title">ARIIX</p>
         <p className="title">ENROLLMENT</p>
       </div>
+
+      {state.loading && (<Loader />)}
+
       <div className="project-details">
         <div className="section">
           <div className="vid-wrap">
             <img className={checkIfMobile() === true ? "mobile-enroll-desktop-overlay enroll-desktop-overlay desktop-overlay" : "enroll-desktop-overlay desktop-overlay"} src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
-              // <iframe title="enroll" src="https://giphy.com/embed/H3Y3W2rTzfpXL8QHGD" frameBorder="0" class="enroll-gif gif vid giphy-embed" allowFullScreen></iframe>
-              <iframe title="enroll" loop autoPlay muted src="https://giphy.com/gifs/KxVgo2QHlVLdZ3RHQh/html5" allow="autoplay; encrypted-media" frameBorder="0" class="enroll-gif gif vid giphy-embed" allowFullScreen></iframe>
+              <iframe onLoad={doneLoading} title="enroll" loop autoPlay muted src="https://giphy.com/gifs/KxVgo2QHlVLdZ3RHQh/html5" allow="autoplay; encrypted-media" frameBorder="0" class="enroll-gif gif vid giphy-embed" allowFullScreen></iframe>
               :
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/Qujm49k.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }

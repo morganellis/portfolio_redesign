@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
+import * as $ from "jquery";
+import Loader from "../../Loader/Loader";
 import { checkIfMobile } from "../../utils/helpers";
 import "./jouve.scss";
 
 export default function Jouve(props) {
+  const [state, setState] = useState({ loading: checkIfMobile() === true ? true : false });
+
+  function doneLoading() {
+    $("#loadWrap").addClass("hide");
+    setState({ loading: false });
+  };
 
   var settings = {
     dots: true,
@@ -20,13 +28,15 @@ export default function Jouve(props) {
       <div className="banner">
         <p className="title">JOUVÉ</p>
       </div>
+
+      {state.loading && (<Loader />)}
+
       <div className="project-details">
         <div className="vid-sect section">
           <div className="vid-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
-              // <iframe title="jouve" src="https://giphy.com/embed/dvrwjt7giMQ5ldT7kV" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
-              <iframe title="jouve" loop autoPlay muted src="https://giphy.com/gifs/dvrwjt7giMQ5ldT7kV/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+              <iframe onLoad={doneLoading} title="jouve" loop autoPlay muted src="https://giphy.com/gifs/dvrwjt7giMQ5ldT7kV/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
               :
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/olsU4Lz.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }

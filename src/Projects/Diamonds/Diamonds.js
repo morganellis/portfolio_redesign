@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import * as $ from "jquery";
+import Loader from "../../Loader/Loader";
 import { checkIfMobile } from "../../utils/helpers";
 import "./diamonds.scss";
 
@@ -8,11 +9,8 @@ export default function Diamonds(props) {
   const [state, setState] = useState({ loading: checkIfMobile() === true ? true : false });
 
   function doneLoading() {
-    // $("#loadWrap").fadeOut();
     $("#loadWrap").addClass("hide");
-    setTimeout(() => {
-      setState({ loading: false });
-    }, 200);
+    setState({ loading: false });
   };
 
   var settings = {
@@ -31,7 +29,7 @@ export default function Diamonds(props) {
         <p className="title">ARIIX DIAMONDS</p>
       </div>
 
-      {state.loading && (<div id="loadWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)}
+      {state.loading && (<Loader />)}
 
       <div className="project-details">
         <div className="vid-sect section">
@@ -44,17 +42,6 @@ export default function Diamonds(props) {
             }
           </div>
         </div>
-
-        {/* <div className="vid-sect section">
-          <div className="vid-wrap">
-            <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
-            {checkIfMobile() === true ?
-              <iframe title="diamonds" src="https://giphy.com/embed/h8mdjqOD0HPPk2DBt0" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
-              :
-              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/Z31uxVp.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
-            }
-          </div>
-        </div> */}
 
         <div className="section">
           <img className="fullpage" src={require("../../assets/img/work/diamonds/diamonds-home.png")} alt="" />
@@ -104,17 +91,6 @@ export default function Diamonds(props) {
         <div className="section">
           <img className="fullpage" src={require("../../assets/img/work/diamonds/diamonds-checkout.png")} alt="" />
         </div>
-
-        {/* <div className="vid-sect section">
-          <div className="vid-wrap">
-            <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
-            {checkIfMobile() === true ?
-              <iframe title="diamonds-education" src="https://giphy.com/embed/XH55z6fv2fWwqgfjmk" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
-              :
-              <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/Rvm71fQ.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
-            }
-          </div>
-        </div> */}
 
         <div className="section">
           <img className="fullpage" src={require("../../assets/img/work/diamonds/diamonds-education.png")} alt="" />

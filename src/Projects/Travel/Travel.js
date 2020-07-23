@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import * as $ from "jquery";
+import Loader from "../../Loader/Loader";
 import { checkIfMobile } from "../../utils/helpers";
 import "./travel.scss";
 
 export default function Travel(props) {
+  const [state, setState] = useState({ loading: checkIfMobile() === true ? true : false });
+
+  function doneLoading() {
+    $("#loadWrap").addClass("hide");
+    setState({ loading: false });
+  };
 
   return (
     <div className="travel-wrap project-wrap">
       <div className="banner">
         <p className="title">ARIIX TRAVEL</p>
       </div>
+
+      {state.loading && (<Loader />)}
+
       <div className="project-details">
         <div className="section">
-
           <div className="vid-wrap">
             <img className="travel-desktop-overlay desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
-              // <iframe title="travel" src="https://giphy.com/embed/kBqnuFehR1LvWb8pqz" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
-              <iframe title="travel" loop autoPlay muted src="https://giphy.com/gifs/lpt44CNIBsmqTbHMyv/html5" allow="autoplay; encrypted-media" frameBorder="0" class="travel-gif gif vid giphy-embed" allowFullScreen></iframe>
+              <iframe onLoad={doneLoading} title="travel" loop autoPlay muted src="https://giphy.com/gifs/lpt44CNIBsmqTbHMyv/html5" allow="autoplay; encrypted-media" frameBorder="0" class="travel-gif gif vid giphy-embed" allowFullScreen></iframe>
               :
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/ApZIB9X.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
