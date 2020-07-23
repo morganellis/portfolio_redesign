@@ -8,8 +8,8 @@ export default function Diamonds(props) {
   const [state, setState] = useState({ loading: checkIfMobile() === true ? true : false });
 
   function doneLoading() {
-    // $("#loadWrap").fadeOut();
-    $("#loadWrap").addClass("hide");
+    $("#loadWrap").fadeOut();
+    // $("#loadWrap").addClass("hide");
     setTimeout(() => {
       setState({ loading: false });
     }, 200);
@@ -41,7 +41,7 @@ export default function Diamonds(props) {
       {/* https://steamuserimages-a.akamaihd.net/ugc/779615184453193381/6545C065131A71752DEC0EB8EFF64A166177DCFD/ */}
       {/* https://thumbs.gfycat.com/BlushingFlashyGlobefish-small.gif */}
 
-      {state.loading && (<div id="loadWrap" className="full-load-wrap"><img className="load-img" src="https://thumbs.gfycat.com/BlushingFlashyGlobefish-small.gif" alt="Loading..." /></div>)}
+      {state.loading && (<div id="loadWrap" className="full-load-wrap"><img className="load-img" src="https://i.pinimg.com/originals/94/c8/ab/94c8ab2e6caafde74a4a483394ba3d78.gif" alt="Loading..." /></div>)}
 
       <div className="project-details">
         <div className="vid-sect section">
