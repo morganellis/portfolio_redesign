@@ -11,7 +11,7 @@ export default function Diamonds(props) {
     $("#loadWrap").fadeOut();
     setTimeout(() => {
       setState({ loading: false });
-    }, 200);
+    }, 300);
   };
 
   var settings = {
@@ -31,8 +31,9 @@ export default function Diamonds(props) {
       </div>
 
       {/* {state.loading && (<div id="loadWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)} */}
+      {/* https://cdn.dribbble.com/users/1689609/screenshots/5027678/geometry.gif */}
 
-      {state.loading && (<div id="loadWrap" className="full-load-wrap"><img src="https://cdn.dribbble.com/users/1689609/screenshots/5027678/geometry.gif" className="load-img" alt="Loading..." /></div>)}
+      {state.loading && (<div id="loadWrap" className="full-load-wrap"><img src="https://digitalsynopsis.com/wp-content/uploads/2016/06/loading-animations-preloader-gifs-ui-ux-effects-11.gif" alt="Loading..." /></div>)}
 
       <div className="project-details">
         <div className="vid-sect section">

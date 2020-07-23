@@ -71,6 +71,7 @@ body {
 .full-load-wrap {
   z-index: 99;
   background: white;
+  background: #E93978;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -130,7 +131,7 @@ body {
   height: 100vh;
   width: 100%;
   background: white;
-}
+  }
 
 .load-container {
   display: flex;
