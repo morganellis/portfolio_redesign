@@ -4,7 +4,11 @@ import "./loader.scss";
 export default function Loader() {
   return (
 
-    <div id="loadWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>
+    <div id="loadWrap">
+      <div className="loading-bkg"></div>
+      <div className="loader"></div>
+      {/* <div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div> */}
+      </div>
     // <div className="load-wrap">
 
     // <div align="center" className="fond">

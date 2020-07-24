@@ -34,7 +34,6 @@ export default function Slenderiiz(props) {
       </div>
 
       {state.loading && (<Loader />)}
-      {/* {state.loading && (<div id="loadWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)} */}
 
       <div className="project-details">
         <div className="section">
