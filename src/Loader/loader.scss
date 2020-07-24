@@ -1,195 +1,357 @@
-.fond {
+.load-wrap {
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: white;
   top: 0;
-  left: 0;
-  z-index: 9;
   height: 100vh;
   width: 100vw;
+  z-index: 2;
 }
 
-.contener_general {
-  -webkit-animation: animball_two 1s infinite;
-  -moz-animation: animball_two 1s infinite;
-  -ms-animation: animball_two 1s infinite;
-  animation: animball_two 1s infinite;
-  width: 44px;
-  height: 44px;
+$colors: (body: #ecf0f1,
+  dot--1: #FA4D85,
+  dot--2: #F8D241,
+  dot--3: #49CFDA,
+  highlight: rgba(white, .6),
+  shadow: rgba(black, .4));
+
+// Function for color to replace map-get
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
 }
 
-.contener_mixte {
-  width: 44px;
-  height: 44px;
+// Variables for dots
+$size: 18px;
+$duration: .666s;
+$timing: linear;
+
+@mixin dot {
   position: absolute;
-}
-
-.ballcolor {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
-
-.ball_1,
-.ball_2,
-.ball_3,
-.ball_4 {
-  position: absolute;
-  -webkit-animation: animball_one 1s infinite ease;
-  -moz-animation: animball_one 1s infinite ease;
-  -ms-animation: animball_one 1s infinite ease;
-  animation: animball_one 1s infinite ease;
-}
-
-.ball_1 {
-  background-color: #49CFDA;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
+  margin: auto;
+  width: $size;
+  height: $size;
+  border-radius: 100%;
 }
 
-.ball_2 {
-  background-color: #F8D241;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: color(body);
+}
+
+.loader {
+  position: fixed;
   top: 0;
-  left: 24px;
+  right: 0;
+  bottom: 0;
+  left: -90px;
+  margin: auto;
+  transform: translate3d(0, 0, 0);
 }
 
-.ball_3 {
-  background-color: #CBCCCE;
-  top: 24px;
-  left: 0;
+.dot {
+  @include dot;
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      background-color: color(dot--#{$i});
+      animation: jump--#{$i} $duration $timing infinite;
+      box-shadow: color(highlight) 0 0 2px 2px,
+      color(dot--#{$i}) 0 0 12px 0;
+    }
+  }
 }
 
-.ball_4 {
-  background-color: #FA4D85;
-  top: 24px;
-  left: 24px;
-}
+// Animations
+$pos: 250%;
+$d1: 6;
+$d2: 1.75;
 
-@-webkit-keyframes animball_one {
+@keyframes jump--1 {
   0% {
-    position: absolute;
+    transform: translate3d(0, 0, 0) scale(2);
+  }
+
+  12.5% {
+    transform: translate3d($pos/$d1, -$pos/$d2, 0);
+  }
+
+  25% {
+    transform: translate3d($pos, -$pos, 0);
+  }
+
+  37.5% {
+    transform: translate3d($pos*2, $pos, 0);
   }
 
   50% {
-    top: 12px;
-    left: 12px;
-    position: absolute;
-    opacity: 0.5;
+    transform: translate3d($pos*2, 0, 0);
   }
 
   100% {
-    position: absolute;
+    transform: translate3d(0, 0, 0) scale(2);
   }
 }
 
-@-moz-keyframes animball_one {
+@keyframes jump--2 {
   0% {
-    position: absolute;
+    transform: translate3d($pos, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(0, 0, 0) scale(2);
+  }
+
+  37.5% {
+    transform: translate3d($pos/$d1, -$pos/$d2, 0);
   }
 
   50% {
-    top: 12px;
-    left: 12px;
-    position: absolute;
-    opacity: 0.5;
+    transform: translate3d($pos, -$pos, 0);
+  }
+
+  62.5% {
+    transform: translate3d($pos*2, $pos, 0);
+  }
+
+  75% {
+    transform: translate3d($pos*2, 0, 0);
   }
 
   100% {
-    position: absolute;
+    transform: translate3d($pos, 0, 0);
   }
 }
 
-@-ms-keyframes animball_one {
+@keyframes jump--3 {
   0% {
-    position: absolute;
+    transform: translate3d($pos*2, 0, 0);
   }
 
   50% {
-    top: 12px;
-    left: 12px;
-    position: absolute;
-    opacity: 0.5;
+    transform: translate3d(0, 0, 0) scale(2);
+  }
+
+  62.5% {
+    transform: translate3d($pos/$d1, -$pos/$d2, 0);
+  }
+
+  75% {
+    transform: translate3d($pos, -$pos, 0);
+  }
+
+  87.5% {
+    transform: translate3d($pos*2, $pos, 0);
   }
 
   100% {
-    position: absolute;
+    transform: translate3d($pos*2, 0, 0);
   }
 }
 
-@keyframes animball_one {
-  0% {
-    position: absolute;
-  }
 
-  50% {
-    top: 12px;
-    left: 12px;
-    position: absolute;
-    opacity: 0.5;
-  }
+// .fond {
+//   position: fixed;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background: white;
+//   top: 0;
+//   left: 0;
+//   z-index: 9;
+//   height: 100vh;
+//   width: 100vw;
+// }
 
-  100% {
-    position: absolute;
-  }
-}
+// .contener_general {
+//   -webkit-animation: animball_two 1s infinite;
+//   -moz-animation: animball_two 1s infinite;
+//   -ms-animation: animball_two 1s infinite;
+//   animation: animball_two 1s infinite;
+//   width: 44px;
+//   height: 44px;
+// }
 
-@-webkit-keyframes animball_two {
-  0% {
-    -webkit-transform: rotate(0deg) scale(1);
-  }
+// .contener_mixte {
+//   width: 44px;
+//   height: 44px;
+//   position: absolute;
+// }
 
-  50% {
-    -webkit-transform: rotate(360deg) scale(1.3);
-  }
+// .ballcolor {
+//   width: 20px;
+//   height: 20px;
+//   border-radius: 50%;
+// }
 
-  100% {
-    -webkit-transform: rotate(720deg) scale(1);
-  }
-}
+// .ball_1,
+// .ball_2,
+// .ball_3,
+// .ball_4 {
+//   position: absolute;
+//   -webkit-animation: animball_one 1s infinite ease;
+//   -moz-animation: animball_one 1s infinite ease;
+//   -ms-animation: animball_one 1s infinite ease;
+//   animation: animball_one 1s infinite ease;
+// }
 
-@-moz-keyframes animball_two {
-  0% {
-    -moz-transform: rotate(0deg) scale(1);
-  }
+// .ball_1 {
+//   background-color: #49CFDA;
+//   top: 0;
+//   left: 0;
+// }
 
-  50% {
-    -moz-transform: rotate(360deg) scale(1.3);
-  }
+// .ball_2 {
+//   background-color: #F8D241;
+//   top: 0;
+//   left: 24px;
+// }
 
-  100% {
-    -moz-transform: rotate(720deg) scale(1);
-  }
-}
+// .ball_3 {
+//   background-color: #CBCCCE;
+//   top: 24px;
+//   left: 0;
+// }
 
-@-ms-keyframes animball_two {
-  0% {
-    -ms-transform: rotate(0deg) scale(1);
-  }
+// .ball_4 {
+//   background-color: #FA4D85;
+//   top: 24px;
+//   left: 24px;
+// }
 
-  50% {
-    -ms-transform: rotate(360deg) scale(1.3);
-  }
+// @-webkit-keyframes animball_one {
+//   0% {
+//     position: absolute;
+//   }
 
-  100% {
-    -ms-transform: rotate(720deg) scale(1);
-  }
-}
+//   50% {
+//     top: 12px;
+//     left: 12px;
+//     position: absolute;
+//     opacity: 0.5;
+//   }
 
-@keyframes animball_two {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
+//   100% {
+//     position: absolute;
+//   }
+// }
 
-  50% {
-    transform: rotate(360deg) scale(1.3);
-  }
+// @-moz-keyframes animball_one {
+//   0% {
+//     position: absolute;
+//   }
 
-  100% {
-    transform: rotate(720deg) scale(1);
-  }
-}
+//   50% {
+//     top: 12px;
+//     left: 12px;
+//     position: absolute;
+//     opacity: 0.5;
+//   }
+
+//   100% {
+//     position: absolute;
+//   }
+// }
+
+// @-ms-keyframes animball_one {
+//   0% {
+//     position: absolute;
+//   }
+
+//   50% {
+//     top: 12px;
+//     left: 12px;
+//     position: absolute;
+//     opacity: 0.5;
+//   }
+
+//   100% {
+//     position: absolute;
+//   }
+// }
+
+// @keyframes animball_one {
+//   0% {
+//     position: absolute;
+//   }
+
+//   50% {
+//     top: 12px;
+//     left: 12px;
+//     position: absolute;
+//     opacity: 0.5;
+//   }
+
+//   100% {
+//     position: absolute;
+//   }
+// }
+
+// @-webkit-keyframes animball_two {
+//   0% {
+//     -webkit-transform: rotate(0deg) scale(1);
+//   }
+
+//   50% {
+//     -webkit-transform: rotate(360deg) scale(1.3);
+//   }
+
+//   100% {
+//     -webkit-transform: rotate(720deg) scale(1);
+//   }
+// }
+
+// @-moz-keyframes animball_two {
+//   0% {
+//     -moz-transform: rotate(0deg) scale(1);
+//   }
+
+//   50% {
+//     -moz-transform: rotate(360deg) scale(1.3);
+//   }
+
+//   100% {
+//     -moz-transform: rotate(720deg) scale(1);
+//   }
+// }
+
+// @-ms-keyframes animball_two {
+//   0% {
+//     -ms-transform: rotate(0deg) scale(1);
+//   }
+
+//   50% {
+//     -ms-transform: rotate(360deg) scale(1.3);
+//   }
+
+//   100% {
+//     -ms-transform: rotate(720deg) scale(1);
+//   }
+// }
+
+// @keyframes animball_two {
+//   0% {
+//     transform: rotate(0deg) scale(1);
+//   }
+
+//   50% {
+//     transform: rotate(360deg) scale(1.3);
+//   }
+
+//   100% {
+//     transform: rotate(720deg) scale(1);
+//   }
+// }
 
 
 
