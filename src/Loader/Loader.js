@@ -3,12 +3,8 @@ import "./loader.scss";
 
 export default function Loader() {
   return (
-    <div class="load-wrap">
-    <div class="loader">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-    </div>
+    <div class="gif load-wrap">
+      <div class="loader"></div>
     </div>
     
     // <div align="center" className="fond">

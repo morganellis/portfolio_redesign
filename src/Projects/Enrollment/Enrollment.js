@@ -30,13 +30,16 @@ export default function Enrollment(props) {
         <p className="title">ENROLLMENT</p>
       </div>
 
-      {state.loading && (<Loader />)}
+      {/* {state.loading && (<Loader className={!state.loading ? "hide" : ""} />)} */}
 
       <div className="project-details">
         <div className="section">
           <div className="first-vid vid-wrap">
             <img className={checkIfMobile() === true ? "mobile-enroll-desktop-overlay enroll-desktop-overlay desktop-overlay" : "enroll-desktop-overlay desktop-overlay"} src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
+              state.loading ?
+                <Loader />
+                :
               <iframe onLoad={doneLoading} title="enroll" loop autoPlay muted src="https://giphy.com/gifs/KxVgo2QHlVLdZ3RHQh/html5" allow="autoplay; encrypted-media" frameBorder="0" class="enroll-gif gif vid giphy-embed" allowFullScreen></iframe>
               :
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/Qujm49k.mp4" type="video/ogg" />Your browser does not support the video tag.</video>

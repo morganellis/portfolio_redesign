@@ -18,13 +18,16 @@ export default function Travel(props) {
         <p className="title">ARIIX TRAVEL</p>
       </div>
 
-      {state.loading && (<Loader />)}
+      {/* {state.loading && (<Loader className={!state.loading ? "hide" : ""} />)} */}
 
       <div className="project-details">
         <div className="section">
           <div className="first-vid vid-wrap">
             <img className="travel-desktop-overlay desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
+              state.loading ?
+                <Loader />
+                :
               <iframe onLoad={doneLoading} title="travel" loop autoPlay muted src="https://giphy.com/gifs/lpt44CNIBsmqTbHMyv/html5" allow="autoplay; encrypted-media" frameBorder="0" class="travel-gif gif vid giphy-embed" allowFullScreen></iframe>
               :
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/ApZIB9X.mp4" type="video/ogg" />Your browser does not support the video tag.</video>

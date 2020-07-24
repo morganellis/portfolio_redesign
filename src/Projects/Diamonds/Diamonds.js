@@ -29,13 +29,16 @@ export default function Diamonds(props) {
         <p className="title">ARIIX DIAMONDS</p>
       </div>
 
-      {state.loading && (<Loader />)}
+      {/* {state.loading && (<Loader className={!state.loading ? "hide" : ""} />)} */}
 
       <div className="project-details">
         <div className="vid-sect section">
           <div className="vid-wrap">
             <img className="diamonds-desktop-overlay desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
+              state.loading ?
+                <Loader />
+                :
               <iframe onLoad={doneLoading} title="diamonds" loop autoPlay muted src="https://giphy.com/gifs/fq6yImeRAPR3FGMcek/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
               :
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/7lQ4vhg.mp4" type="video/ogg" />Your browser does not support the video tag.</video>

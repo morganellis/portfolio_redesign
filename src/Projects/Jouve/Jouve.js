@@ -29,13 +29,16 @@ export default function Jouve(props) {
         <p className="title">JOUVÉ</p>
       </div>
 
-      {state.loading && (<Loader />)}
+      {/* {state.loading && (<Loader className={!state.loading ? "hide" : ""} />)} */}
 
       <div className="project-details">
         <div className="first-vid vid-sect section">
           <div className="vid-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
+              state.loading ?
+                <Loader />
+                :
               <iframe onLoad={doneLoading} title="jouve" loop autoPlay muted src="https://giphy.com/gifs/dvrwjt7giMQ5ldT7kV/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
               :
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/olsU4Lz.mp4" type="video/ogg" />Your browser does not support the video tag.</video>

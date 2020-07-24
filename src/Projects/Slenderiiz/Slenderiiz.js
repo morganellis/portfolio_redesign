@@ -2,14 +2,24 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import * as $ from "jquery";
 import Loader from "../../Loader/Loader";
+import LoaderMain from "../../Loader/LoaderMain";
 import { checkIfMobile } from "../../utils/helpers";
 import "./slenderiiz.scss";
 
 export default function Slenderiiz(props) {
-  const [state, setState] = useState({ loading: checkIfMobile() === true ? true : false });
+  const [state, setState] = useState({ loading: checkIfMobile() === true ? true : false, loadingMain: checkIfMobile() === true ? true : false});
 
   function doneLoading() {
     $("#loadWrap").addClass("hide");
+    setState({ loading: false });
+    // $("#loadWrap").fadeOut();
+    // setTimeout(() => {
+    //   setState({ loading: false });
+    // }, 200);
+  };
+
+  function doneLoadingMain() {
+    $("#loadMain").addClass("hide");
     setState({ loading: false });
     // $("#loadWrap").fadeOut();
     // setTimeout(() => {
@@ -29,19 +39,20 @@ export default function Slenderiiz(props) {
 
   return (
     <div className="slenderiiz-wrap project-wrap">
-      <div className="banner">
+      <div className="banner" onLoad={doneLoadingMain}>
         <p className="title">SLENDERIIZ</p>
       </div>
 
-      {state.loading && (<Loader />)}
-      {/* {state.loading && (<div id="loadWrap"><div className="loading-bkg"></div><div id="loading" className="project-loading-wrap"><div className="loading-ring"><div></div><div></div><div></div><div></div></div></div></div>)} */}
+      {state.loadingMain && (<LoaderMain />)}
 
       <div className="project-details">
         <div className="section">
           <div className="first-vid vid-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />
             {checkIfMobile() === true ?
-              <iframe onLoad={doneLoading} title="slenderiiz" loop autoPlay muted src="https://giphy.com/gifs/UTBGkbzH44xLgS5vgF/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
+              state.loading ?
+              <Loader/>
+                : <iframe onLoad={doneLoading} title="slenderiiz" loop autoPlay muted src="https://giphy.com/gifs/UTBGkbzH44xLgS5vgF/html5" allow="autoplay; encrypted-media" frameBorder="0" class="gif vid giphy-embed" allowFullScreen></iframe>
               :
               <video className="vid" loop autoPlay muted><source src="https://i.imgur.com/AfzQ4ZF.mp4" type="video/ogg" />Your browser does not support the video tag.</video>
             }
