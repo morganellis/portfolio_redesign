@@ -31,7 +31,7 @@ export default function Diamonds(props) {
 
       {state.loading && (<Loader />)}
 
-      <div className="project-details">
+      <div className={state.loading ? "hide" : "project-details"}>
         <div className="vid-sect section">
           <div className="vid-wrap">
             <img className="diamonds-desktop-overlay desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />

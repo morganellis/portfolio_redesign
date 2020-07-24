@@ -31,7 +31,7 @@ export default function Jouve(props) {
 
       {state.loading && (<Loader />)}
 
-      <div className="project-details">
+      <div className={state.loading ? "hide" : "project-details"}>
         <div className="first-vid vid-sect section">
           <div className="vid-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />

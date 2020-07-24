@@ -32,7 +32,7 @@ export default function Enrollment(props) {
 
       {state.loading && (<Loader />)}
 
-      <div className="project-details">
+      <div className={state.loading ? "hide" : "project-details"}>
         <div className="section">
           <div className="first-vid vid-wrap">
             <img className={checkIfMobile() === true ? "mobile-enroll-desktop-overlay enroll-desktop-overlay desktop-overlay" : "enroll-desktop-overlay desktop-overlay"} src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />

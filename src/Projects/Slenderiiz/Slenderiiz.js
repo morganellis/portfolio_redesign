@@ -11,7 +11,8 @@ export default function Slenderiiz(props) {
   function doneLoading() {
     $("#loadWrap").addClass("hide");
     setState({ loading: false });
-    // $("#loadWrap").fadeOut();
+    // $(".loader-wrap").addClass("hide");
+    // $(".loading-bkg").fadeOut();
     // setTimeout(() => {
     //   setState({ loading: false });
     // }, 200);
@@ -35,7 +36,7 @@ export default function Slenderiiz(props) {
 
       {state.loading && (<Loader />)}
 
-      <div className="project-details">
+      <div className={state.loading ? "hide" : "project-details"}>
         <div className="section">
           <div className="first-vid vid-wrap">
             <img className="desktop-overlay" src={require("../../assets/img/main/desktop-no-bkg.png")} alt="" />

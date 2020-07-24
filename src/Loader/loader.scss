@@ -1,57 +1,3 @@
-$animation-duration: 1.8s;
-
-.loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  height: 10px;
-  background: #49CFDA;
-  border-radius: 5px;
-  animation: load $animation-duration ease-in-out infinite;
-  z-index: 3;
-
-  &:before,
-  &:after {
-    position: absolute;
-    display: block;
-    content: "";
-    animation: load $animation-duration ease-in-out infinite;
-    height: 10px;
-    border-radius: 5px;
-  }
-
-  &:before {
-    top: -20px;
-    left: 10px;
-    width: 40px;
-    background: #FA4D85;
-  }
-
-  &:after {
-    bottom: -20px;
-    width: 35px;
-    background: #F8D241;
-  }
-}
-
-@keyframes load {
-  0% {
-    transform: translateX(40px);
-  }
-
-  50% {
-    transform: translateX(-30px);
-  }
-
-  100% {
-    transform: translateX(40px);
-  }
-}
-
-
 .loading-bkg {
   z-index: 1;
   position: fixed;
@@ -63,64 +9,42 @@ $animation-duration: 1.8s;
   height: 100vh;
   width: 100%;
   background: white;
+  overflow: hidden;
 }
 
-.load-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
-}
 
-.loading-wrap {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 100%;
-  background-color: rgba(245, 245, 245, 0.7);
-  z-index: 999999999999;
-}
+.loader-wrap {
+  margin-top: -8vh;
+  z-index: 3;
+  }
 
-.loading-ring {
-  z-index: 999;
+.loader {
   display: inline-block;
+  width: 30px;
+  height: 30px;
   position: relative;
-  width: 80px;
-  height: 80px;
+  border: 4px solid #FA4D85;
+  top: 40%;
+  animation: loader 2s infinite ease;
+  z-index: 3;
 }
 
-.loading-ring div {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border: 8px solid #FA4D85;
-  border-radius: 50%;
-  animation: loading-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #FA4D85 transparent transparent transparent;
-}
-
-.loading-ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-
-.loading-ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-
-.loading-ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-
-@keyframes loading-ring {
+@keyframes loader {
   0% {
     transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
   }
 
   100% {
